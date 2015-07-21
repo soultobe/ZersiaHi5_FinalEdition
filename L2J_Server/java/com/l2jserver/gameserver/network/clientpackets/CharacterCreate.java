@@ -306,8 +306,16 @@ public final class CharacterCreate extends L2GameClientPacket
 		}
 		
 		final L2PcTemplate template = newChar.getTemplate();
-		Location createLoc = template.getCreationPoint();
-		newChar.setXYZInvisible(createLoc.getX(), createLoc.getY(), createLoc.getZ());
+		if (Config.CUSTOM_STARTING_LOC)
+		{
+			Location createLoc = new Location(Config.CUSTOM_STARTING_LOC_X, Config.CUSTOM_STARTING_LOC_Y, Config.CUSTOM_STARTING_LOC_Z);
+			newChar.setXYZInvisible(createLoc.getX(), createLoc.getY(), createLoc.getZ());
+		}
+		else
+		{
+			Location createLoc = template.getCreationPoint();
+			newChar.setXYZInvisible(createLoc.getX(), createLoc.getY(), createLoc.getZ());
+		}
 		
 		if (Config.ENABLE_CHAR_TITLE)
 		{

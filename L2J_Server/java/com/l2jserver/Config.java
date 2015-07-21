@@ -121,6 +121,11 @@ public final class Config
 	// --------------------------------------------------
 	public static boolean ENABLE_CHAR_TITLE;
 	public static String CHAR_TITLE;
+	// ---------------------------------------------------
+	public static boolean CUSTOM_STARTING_LOC;
+	public static int CUSTOM_STARTING_LOC_X;
+	public static int CUSTOM_STARTING_LOC_Y;
+	public static int CUSTOM_STARTING_LOC_Z;
 	
 	// --------------------------------------------------
 	// L2J Variable Definitions
@@ -1396,6 +1401,11 @@ public final class Config
 			// ----------------------------------------------------------------
 			ENABLE_CHAR_TITLE = CustomSettings.getBoolean("EnableCharTitle", true);
 			CHAR_TITLE = CustomSettings.getString("CharTitle", "Welcome!");
+			// ----------------------------------------------------------------
+			CUSTOM_STARTING_LOC = CustomSettings.getBoolean("CustomStartingLocation", false);
+			CUSTOM_STARTING_LOC_X = CustomSettings.getInt("CustomStartingLocX", 82698);
+			CUSTOM_STARTING_LOC_Y = CustomSettings.getInt("CustomStartingLocY", 148638);
+			CUSTOM_STARTING_LOC_Z = CustomSettings.getInt("CustomStartingLocZ", -3473);
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

@@ -118,6 +118,9 @@ public final class Config
 	public static boolean ALLOW_ORC;
 	public static boolean ALLOW_DWARF;
 	public static boolean ALLOW_KAMAEL;
+	// --------------------------------------------------
+	public static boolean ENABLE_CHAR_TITLE;
+	public static String CHAR_TITLE;
 	
 	// --------------------------------------------------
 	// L2J Variable Definitions
@@ -1390,6 +1393,9 @@ public final class Config
 			ALLOW_ORC = CustomSettings.getBoolean("AllowOrc", true);
 			ALLOW_DWARF = CustomSettings.getBoolean("AllowDwarf", true);
 			ALLOW_KAMAEL = CustomSettings.getBoolean("AllowKamael", true);
+			// ----------------------------------------------------------------
+			ENABLE_CHAR_TITLE = CustomSettings.getBoolean("EnableCharTitle", true);
+			CHAR_TITLE = CustomSettings.getString("CharTitle", "Welcome!");
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

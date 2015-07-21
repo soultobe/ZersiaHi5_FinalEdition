@@ -107,6 +107,18 @@ public final class Config
 	public static final String EMAIL_CONFIG_FILE = "./config/Email.properties";
 	public static final String CH_SIEGE_FILE = "./config/ConquerableHallSiege.properties";
 	public static final String GEODATA_FILE = "./config/GeoData.properties";
+	public static final String CUSTOM_CONFIG_FILE = "./config/Custom.properties";
+	
+	// --------------------------------------------------
+	// Zersia Custom Settings
+	// --------------------------------------------------
+	public static boolean ALLOW_HUMAN;
+	public static boolean ALLOW_ELF;
+	public static boolean ALLOW_DARKELF;
+	public static boolean ALLOW_ORC;
+	public static boolean ALLOW_DWARF;
+	public static boolean ALLOW_KAMAEL;
+	
 	// --------------------------------------------------
 	// L2J Variable Definitions
 	// --------------------------------------------------
@@ -1369,6 +1381,15 @@ public final class Config
 			CLAN_LEVEL_11_REQUIREMENT = Feature.getInt("ClanLevel11Requirement", 170);
 			ALLOW_WYVERN_ALWAYS = Feature.getBoolean("AllowRideWyvernAlways", false);
 			ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
+			// :Zersia
+			// Load Custom Properties file (if exists)
+			final PropertiesParser CustomSettings = new PropertiesParser(CUSTOM_CONFIG_FILE);
+			ALLOW_HUMAN = CustomSettings.getBoolean("AllowHuman", true);
+			ALLOW_ELF = CustomSettings.getBoolean("AllowElf", true);
+			ALLOW_DARKELF = CustomSettings.getBoolean("AllowDarkElf", true);
+			ALLOW_ORC = CustomSettings.getBoolean("AllowOrc", true);
+			ALLOW_DWARF = CustomSettings.getBoolean("AllowDwarf", true);
+			ALLOW_KAMAEL = CustomSettings.getBoolean("AllowKamael", true);
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

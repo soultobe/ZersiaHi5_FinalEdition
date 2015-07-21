@@ -55,6 +55,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `vitality_points` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   `createDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `language` VARCHAR(2) DEFAULT NULL,
+  `game_points` bigint(13) NOT NULL DEFAULT '0',
   PRIMARY KEY (`charId`),
   KEY `account_name` (`account_name`),
   KEY `char_name` (`char_name`),

@@ -83,6 +83,7 @@ import handlers.admincommandhandlers.AdminPcCondOverride;
 import handlers.admincommandhandlers.AdminPetition;
 import handlers.admincommandhandlers.AdminPledge;
 import handlers.admincommandhandlers.AdminPolymorph;
+import handlers.admincommandhandlers.AdminPrimePoints;
 import handlers.admincommandhandlers.AdminPunishment;
 import handlers.admincommandhandlers.AdminQuest;
 import handlers.admincommandhandlers.AdminReload;
@@ -400,6 +401,7 @@ public class MasterHandler
 			AdminUnblockIp.class,
 			AdminVitality.class,
 			AdminZone.class,
+			AdminPrimePoints.class,
 		},
 		{
 			// Bypass Handlers

@@ -81,6 +81,7 @@ import com.l2jserver.gameserver.data.xml.impl.UIData;
 import com.l2jserver.gameserver.datatables.AugmentationData;
 import com.l2jserver.gameserver.datatables.BotReportTable;
 import com.l2jserver.gameserver.datatables.EventDroplist;
+import com.l2jserver.gameserver.datatables.ItemMallData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.MerchantPriceConfigTable;
 import com.l2jserver.gameserver.datatables.SkillData;
@@ -222,6 +223,7 @@ public final class GameServer
 		MerchantPriceConfigTable.getInstance().loadInstances();
 		BuyListData.getInstance();
 		MultisellData.getInstance();
+		ItemMallData.getInstance();
 		RecipeData.getInstance();
 		ArmorSetsData.getInstance();
 		FishData.getInstance();

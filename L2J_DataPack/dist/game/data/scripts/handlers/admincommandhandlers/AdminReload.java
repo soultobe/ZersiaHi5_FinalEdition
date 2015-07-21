@@ -35,6 +35,7 @@ import com.l2jserver.gameserver.data.xml.impl.EnchantItemGroupsData;
 import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.data.xml.impl.TransformData;
+import com.l2jserver.gameserver.datatables.ItemMallData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
@@ -245,6 +246,12 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					TransformData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded transform data.");
+					break;
+				}
+				case "itemmall":
+				{
+					ItemMallData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item mall data.");
 					break;
 				}
 				default:

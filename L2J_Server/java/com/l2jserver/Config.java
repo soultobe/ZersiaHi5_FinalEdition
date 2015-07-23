@@ -108,6 +108,7 @@ public final class Config
 	public static final String CH_SIEGE_FILE = "./config/ConquerableHallSiege.properties";
 	public static final String GEODATA_FILE = "./config/GeoData.properties";
 	public static final String CUSTOM_CONFIG_FILE = "./config/Custom.properties";
+	public static final String CUSTOM_MESSAGE_FILE = "./config/CustomMessage.properties";
 	
 	// --------------------------------------------------
 	// Zersia Custom Settings
@@ -145,6 +146,10 @@ public final class Config
 	// --------------------------------------------------
 	public static int CUSTOM_STARTING_PC_BANG_POINT;
 	public static int CUSTOM_STARTING_GAME_POINT;
+	
+	// --------------------------------------------------
+	// Zersia Custom Message Settings
+	// --------------------------------------------------
 	
 	// --------------------------------------------------
 	// L2J Variable Definitions

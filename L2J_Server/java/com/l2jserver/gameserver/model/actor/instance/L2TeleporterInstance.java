@@ -24,17 +24,24 @@ import java.util.StringTokenizer;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
+// :Zersia
+import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.SiegeManager;
 import com.l2jserver.gameserver.instancemanager.TownManager;
+import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2TeleportLocation;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jserver.gameserver.model.items.L2Item;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+// :Zersia
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author NightMarez
@@ -78,6 +85,84 @@ public final class L2TeleporterInstance extends L2Npc
 			player.sendPacket(html);
 			return;
 		}
+		
+		// :Zersia
+		else if (command.startsWith("PartyGo"))
+		{
+			if (Config.PARTYGO_ENABLE == true)
+			{
+				NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+				L2Party party = player.getParty();
+				if (party == null)
+				{
+					String filename = "data/html/teleporter/party-no.htm";
+					html.setFile(player.getHtmlPrefix(), filename);
+					html.replace("%objectId%", String.valueOf(getObjectId()));
+					html.replace("%npcname%", getName());
+					player.sendPacket(html);
+					return;
+				}
+				
+				if ((player.getLevel() < Integer.valueOf(Config.PARTYGO_MINLEVEL)) || (player.getLevel() > Integer.valueOf(Config.PARTYGO_MAXLEVEL)))
+				{
+					String filename = "data/html/teleporter/party-level.htm";
+					html.setFile(player.getHtmlPrefix(), filename);
+					html.replace("%objectId%", String.valueOf(getObjectId()));
+					html.replace("%npcname%", getName());
+					player.sendPacket(html);
+					return;
+				}
+				
+				if (player.getParty().getLeaderObjectId() == player.getObjectId())
+				{
+					String filename = "data/html/teleporter/party-leader.htm";
+					html.setFile(player.getHtmlPrefix(), filename);
+					html.replace("%objectId%", String.valueOf(getObjectId()));
+					html.replace("%npcname%", getName());
+					player.sendPacket(html);
+					return;
+				}
+				L2ItemInstance reqItem = player.getInventory().getItemByItemId(Config.PARTYGO_ITEMID);
+				L2Item _item = ItemTable.getInstance().getTemplate(Config.PARTYGO_ITEMID);
+				int reqItemCount = 0;
+				if (reqItem == null)
+				{
+					reqItemCount = 0;
+				}
+				else
+				{
+					reqItemCount = (int) reqItem.getCount();
+				}
+				if (reqItemCount < Config.PARTYGO_ITEMCOUNT)
+				{
+					String filename = "data/html/teleporter/party-need.htm";
+					html.setFile(player.getHtmlPrefix(), filename);
+					html.replace("%objectId%", String.valueOf(getObjectId()));
+					html.replace("%npcname%", getName());
+					html.replace("%itemname%", _item.getName());
+					html.replace("%itemcount%", String.valueOf(Config.PARTYGO_ITEMCOUNT));
+					player.sendPacket(html);
+					return;
+				}
+				player.destroyItemByItemId("PartyGo", Config.PARTYGO_ITEMID, Config.PARTYGO_ITEMCOUNT, player, false);
+				SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_DISAPPEARED);
+				sm.addItemName(Config.PARTYGO_ITEMID);
+				sm.addInt(Config.PARTYGO_ITEMCOUNT);
+				player.sendPacket(sm);
+				int xx = player.getParty().getMembers().get(0).getX();
+				int yy = player.getParty().getMembers().get(0).getY();
+				int zz = player.getParty().getMembers().get(0).getZ();
+				player.teleToLocation(xx, yy, zz, true);
+				String filename = "data/html/teleporter/party-ok.htm";
+				html.setFile(player.getHtmlPrefix(), filename);
+				html.replace("%objectId%", String.valueOf(getObjectId()));
+				html.replace("%npcname%", getName());
+				player.sendPacket(html);
+				return;
+			}
+		}
+		// :Zersia
+		
 		else if (actualCommand.equalsIgnoreCase("goto"))
 		{
 			int npcId = getId();

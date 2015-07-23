@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  */
 public final class SystemMessage extends AbstractMessagePacket<SystemMessage>
 {
-	private SystemMessage(final SystemMessageId smId)
+	public SystemMessage(final SystemMessageId smId)
 	{
 		super(smId);
 	}
@@ -74,6 +74,7 @@ public final class SystemMessage extends AbstractMessagePacket<SystemMessage>
 	 * @param id
 	 * @deprecated
 	 */
+	@SuppressWarnings("unused")
 	@Deprecated
 	private SystemMessage(final int id)
 	{

@@ -146,6 +146,12 @@ public final class Config
 	// --------------------------------------------------
 	public static int CUSTOM_STARTING_PC_BANG_POINT;
 	public static int CUSTOM_STARTING_GAME_POINT;
+	// --------------------------------------------------
+	public static int PARTYGO_MINLEVEL;
+	public static int PARTYGO_MAXLEVEL;
+	public static int PARTYGO_ITEMID;
+	public static int PARTYGO_ITEMCOUNT;
+	public static boolean PARTYGO_ENABLE;
 	
 	// --------------------------------------------------
 	// Zersia Custom Message Settings
@@ -1474,6 +1480,12 @@ public final class Config
 			{
 				CUSTOM_STARTING_GAME_POINT = 0;
 			}
+			// ----------------------------------------------------------------
+			PARTYGO_MINLEVEL = CustomSettings.getInt("PartyGoMinLv", 1);
+			PARTYGO_MAXLEVEL = CustomSettings.getInt("PartyGoMaxLv", 85);
+			PARTYGO_ITEMID = CustomSettings.getInt("PartyGoItemId", 8615);
+			PARTYGO_ITEMCOUNT = CustomSettings.getInt("PartyGoItemCount", 1);
+			PARTYGO_ENABLE = CustomSettings.getBoolean("EnabledPartyGo", false);
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

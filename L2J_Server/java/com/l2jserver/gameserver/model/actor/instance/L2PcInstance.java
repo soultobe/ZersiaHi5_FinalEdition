@@ -422,6 +422,8 @@ public final class L2PcInstance extends L2Playable
 	private ScheduledFuture<?> _dismountTask;
 	private boolean _petItems = false;
 	
+	public Future<?> _VitaminItemTask = null;
+	
 	/** The list of sub-classes this character has. */
 	private Map<Integer, SubClass> _subClasses;
 	
@@ -5651,6 +5653,7 @@ public final class L2PcInstance extends L2Playable
 		stopChargeTask();
 		stopFameTask();
 		stopVitalityTask();
+		stopVitaminItemTask();
 		stopRecoBonusTask();
 		stopRecoGiveTask();
 	}
@@ -12539,6 +12542,46 @@ public final class L2PcInstance extends L2Playable
 	public void updateVitalityPoints(float points, boolean useRates, boolean quiet)
 	{
 		getStat().updateVitalityPoints(points, useRates, quiet);
+	}
+	
+	public void startVitaminItemTask()
+	{
+		if (_VitaminItemTask == null)
+		{
+			_VitaminItemTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new VitaminItemTask(this), (60000L * Config.GMGIFT_RUNNING_TIME), (60000L * Config.GMGIFT_RUNNING_TIME));
+		}
+	}
+	
+	private void stopVitaminItemTask()
+	{
+		if (_VitaminItemTask != null)
+		{
+			_VitaminItemTask.cancel(false);
+			_VitaminItemTask = null;
+		}
+	}
+	
+	class VitaminItemTask implements Runnable
+	{
+		private final L2PcInstance _player;
+		
+		protected VitaminItemTask(L2PcInstance player)
+		{
+			_player = player;
+		}
+		
+		@Override
+		public void run()
+		{
+			final L2PcInstance onlinePlayer;
+			onlinePlayer = _player;
+			if (Config.GMGIFT_ENABLE == true)
+			{
+				onlinePlayer.getInventory().addItem("Admin", Config.GMGIFT_ITEMID, Config.GMGIFT_ITEMCOUNT, onlinePlayer, null);
+				onlinePlayer.sendMessage(Config.GMGIFT_MSG);
+				onlinePlayer.sendMessage("OnLine Player : " + L2World.getInstance().getAllPlayersCount() + " " + Config.ONLINEUSER_MSG);
+			}
+		}
 	}
 	
 	public void checkItemRestriction()

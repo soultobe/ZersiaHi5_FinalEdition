@@ -233,6 +233,13 @@ public final class Config
 	public static int GAMBLERANKITEMCOUNT09;
 	public static int GAMBLERANKITEM10;
 	public static int GAMBLERANKITEMCOUNT10;
+	// --------------------------------------------------
+	public static boolean GMGIFT_ENABLE;
+	public static int GMGIFT_ITEMID;
+	public static int GMGIFT_ITEMCOUNT;
+	public static int GMGIFT_RUNNING_TIME;
+	public static String GMGIFT_MSG;
+	public static String ONLINEUSER_MSG;
 	
 	// --------------------------------------------------
 	// Zersia Custom Message Settings
@@ -1648,6 +1655,13 @@ public final class Config
 			GAMBLERANKITEMCOUNT09 = CustomSettings.getInt("EventGambleRankItemCount09", 1);
 			GAMBLERANKITEM10 = CustomSettings.getInt("EventGambleRankItem10", 57);
 			GAMBLERANKITEMCOUNT10 = CustomSettings.getInt("EventGambleRankItemCount10", 1);
+			// ----------------------------------------------------------------
+			GMGIFT_ENABLE = CustomSettings.getBoolean("GmGiftEnabled", false);
+			GMGIFT_ITEMID = CustomSettings.getInt("GmGiftItemId", 57);
+			GMGIFT_ITEMCOUNT = CustomSettings.getInt("GmGiftItemCount", 100);
+			GMGIFT_RUNNING_TIME = CustomSettings.getInt("GmGiftRunningTime", 1800);
+			GMGIFT_MSG = CustomSettings.getString("GmGiftMsg", "");
+			ONLINEUSER_MSG = CustomSettings.getString("OnLineUserMsg", "");
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

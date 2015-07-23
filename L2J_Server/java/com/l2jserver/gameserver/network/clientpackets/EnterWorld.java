@@ -561,6 +561,11 @@ public class EnterWorld extends L2GameClientPacket
 		
 		L2ClassMasterInstance.showQuestionMark(activeChar);
 		
+		if (Config.GMGIFT_ENABLE == true)
+		{
+			activeChar.startVitaminItemTask();
+		}
+		
 		int birthday = activeChar.checkBirthDay();
 		if (birthday == 0)
 		{

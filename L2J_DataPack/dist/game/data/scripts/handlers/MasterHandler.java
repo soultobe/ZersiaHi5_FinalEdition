@@ -161,6 +161,7 @@ import handlers.communityboard.HomeBoard;
 import handlers.communityboard.HomepageBoard;
 import handlers.communityboard.MailBoard;
 import handlers.communityboard.MemoBoard;
+import handlers.communityboard.PlayerListBoard;
 import handlers.communityboard.RegionBoard;
 import handlers.itemhandlers.BeastSoulShot;
 import handlers.itemhandlers.BeastSpiritShot;
@@ -473,6 +474,7 @@ public class MasterHandler
 			MailBoard.class,
 			MemoBoard.class,
 			RegionBoard.class,
+			PlayerListBoard.class,
 		},
 		{
 			// Item Handlers

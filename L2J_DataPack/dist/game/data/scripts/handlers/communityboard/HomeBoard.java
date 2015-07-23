@@ -37,6 +37,7 @@ public final class HomeBoard implements IParseBoardHandler
 {
 	// SQL Queries
 	private static final String COUNT_FAVORITES = "SELECT COUNT(*) AS favorites FROM `bbs_favorites` WHERE `playerId`=?";
+	private static final String COUNT_PLAYERS = "SELECT COUNT(*) AS players FROM `characters` Where accesslevel = 0 and `online` <> ?";
 	
 	private static final String[] COMMANDS =
 	{
@@ -61,6 +62,7 @@ public final class HomeBoard implements IParseBoardHandler
 			html = html.replaceAll("%fav_count%", Integer.toString(getFavoriteCount(activeChar)));
 			html = html.replaceAll("%region_count%", Integer.toString(getRegionCount(activeChar)));
 			html = html.replaceAll("%clan_count%", Integer.toString(ClanTable.getInstance().getClanCount()));
+			html = html.replaceAll("%player_count%", Integer.toString(getPlayersCount(activeChar)));
 			CommunityBoardHandler.separateAndSend(html, activeChar);
 		}
 		else if (command.startsWith("_bbstop;"))
@@ -111,4 +113,28 @@ public final class HomeBoard implements IParseBoardHandler
 	{
 		return 0; // TODO: Implement.
 	}
+	
+	private static int getPlayersCount(L2PcInstance player)
+	{
+		int count = 0;
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(COUNT_PLAYERS))
+		{
+			// ps.setInt(1, player.getObjectId());
+			ps.setInt(1, 0);
+			try (ResultSet rs = ps.executeQuery())
+			{
+				if (rs.next())
+				{
+					count = rs.getInt("players");
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			LOG.warning(FavoriteBoard.class.getSimpleName() + ": Coudn't load players count for player " + player.getName());
+		}
+		return count;
+	}
+	
 }

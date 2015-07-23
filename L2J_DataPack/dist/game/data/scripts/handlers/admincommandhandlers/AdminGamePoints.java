@@ -46,15 +46,22 @@ public class AdminGamePoints implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(22);
-				if (!addGamePoints(activeChar, val))
+				if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 				{
-					activeChar.sendMessage("Usage: //add_game_points count");
+					String val = command.substring(22);
+					if (!addGamePoints(activeChar, val))
+					{
+						activeChar.sendMessage("사용법: //add_game_points 숫자 입력");
+					}
+				}
+				else
+				{
+					activeChar.sendMessage("타겟이 없습니다.");
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
-			{ // Case of missing parameter
-				activeChar.sendMessage("Usage: //add_game_points count");
+			{
+				activeChar.sendMessage("사용법: //add_game_points 숫자 입력");
 			}
 		}
 		else if (command.equals("admin_count_game_points"))
@@ -62,11 +69,11 @@ public class AdminGamePoints implements IAdminCommandHandler
 			if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 			{
 				L2PcInstance target = (L2PcInstance) activeChar.getTarget();
-				activeChar.sendMessage(target.getName() + " has a total of " + target.getGamePoints() + " game points.");
+				activeChar.sendMessage(target.getName() + "님의 총 아이템 몰 포인트는 " + target.getGamePoints() + "포인트입니다.");
 			}
 			else
 			{
-				activeChar.sendMessage("You must select a player first.");
+				activeChar.sendMessage("타겟이 없습니다.");
 			}
 		}
 		else if (command.equals("admin_gamepoints"))
@@ -77,30 +84,46 @@ public class AdminGamePoints implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(22);
-				if (!setGamePoints(activeChar, val))
+				if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 				{
-					activeChar.sendMessage("Usage: //set_game_points count");
+					String val = command.substring(22);
+					if (!setGamePoints(activeChar, val))
+					{
+						activeChar.sendMessage("사용법: //set_game_points 숫자 입력");
+					}
+				}
+				else
+				{
+					activeChar.sendMessage("타겟이 없습니다.");
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
-			{ // Case of missing parameter
-				activeChar.sendMessage("Usage: //set_game_points count");
+			{
+				// Case of missing parameter
+				activeChar.sendMessage("사용법: //set_game_points 숫자 입력");
 			}
 		}
 		else if (command.startsWith("admin_subtract_game_points"))
 		{
 			try
 			{
-				String val = command.substring(27);
-				if (!subtractGamePoints(activeChar, val))
+				if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 				{
-					activeChar.sendMessage("Usage: //subtract_game_points count");
+					String val = command.substring(27);
+					if (!subtractGamePoints(activeChar, val))
+					{
+						activeChar.sendMessage("사용법: //subtract_game_points 숫자 입력");
+					}
+				}
+				else
+				{
+					activeChar.sendMessage("타겟이 없습니다.");
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
-			{ // Case of missing parameter
-				activeChar.sendMessage("Usage: //subtract_game_points count");
+			{
+				// Case of missing parameter
+				activeChar.sendMessage("사용법: //subtract_game_points 숫자 입력");
 			}
 		}
 		return true;
@@ -130,7 +153,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 		final Long points = Long.valueOf(val);
 		if (points < 1)
 		{
-			admin.sendMessage("Invalid game point count.");
+			admin.sendMessage("입력이 바르지 않습니다.");
 			return false;
 		}
 		
@@ -144,8 +167,10 @@ public class AdminGamePoints implements IAdminCommandHandler
 			player.setGamePoints(currentPoints + points);
 		}
 		
-		admin.sendMessage("Added " + points + " game points to " + player.getName() + ".");
-		admin.sendMessage(player.getName() + " has now a total of " + player.getGamePoints() + " game points.");
+		player.sendMessage("GM이 " + player.getName() + "님에게 아이템 몰 포인트 " + points + "포인트를 주었습니다.");
+		player.sendMessage("아이템 몰 포인트 " + points + "포인트를 획득하였습니다.");
+		admin.sendMessage(player.getName() + "님에게 아이템 몰 포인트 " + points + "포인트를 주었습니다.");
+		admin.sendMessage(player.getName() + "님의 총 아이템 몰 포인트는 " + player.getGamePoints() + "포인트입니다.");
 		return true;
 	}
 	
@@ -166,12 +191,15 @@ public class AdminGamePoints implements IAdminCommandHandler
 		final Long points = Long.valueOf(val);
 		if (points < 0)
 		{
-			admin.sendMessage("Invalid game point count.");
+			admin.sendMessage("입력이 바르지 않습니다.");
 			return false;
 		}
 		
 		player.setGamePoints(points);
-		admin.sendMessage(player.getName() + " has now a total of " + points + " game points.");
+		player.sendMessage("GM이 " + player.getName() + "님의 아이템 몰 포인트를 " + points + "포인트로 변경하였습니다.");
+		player.sendMessage("아이템 몰 포인트가 " + points + "포인트로 변경되었습니다.");
+		admin.sendMessage(player.getName() + "님의 아이템 몰 포인트를 " + points + "포인트로 변경하였습니다.");
+		admin.sendMessage(player.getName() + "님의 총 아이템 몰 포인트는 " + points + "포인트입니다.");
 		return true;
 	}
 	
@@ -192,7 +220,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 		final Long points = Long.valueOf(val);
 		if (points < 1)
 		{
-			admin.sendMessage("Invalid game point count.");
+			admin.sendMessage("입력이 바르지 않습니다.");
 			return false;
 		}
 		
@@ -200,12 +228,18 @@ public class AdminGamePoints implements IAdminCommandHandler
 		if (currentPoints <= points)
 		{
 			player.setGamePoints(0);
+			player.sendMessage("GM이 " + player.getName() + "님의 아이템 몰 포인트 " + currentPoints + "포인트를 회수하였습니다.");
+			player.sendMessage("아이템 몰 포인트 " + currentPoints + "포인트가 감소되었습니다.");
+			admin.sendMessage(player.getName() + "님의 아이템 몰 포인트 " + currentPoints + "포인트를 회수하였습니다.");
 		}
 		else
 		{
 			player.setGamePoints(currentPoints - points);
+			player.sendMessage("GM이 " + player.getName() + "님의 아이템 몰 포인트 " + points + "포인트를 회수하였습니다.");
+			player.sendMessage("아이템 몰 포인트 " + points + "포인트가 감소되었습니다.");
+			admin.sendMessage(player.getName() + "님의 아이템 몰 포인트 " + points + "포인트를 회수하였습니다.");
 		}
-		admin.sendMessage(player.getName() + " has now a total of " + player.getGamePoints() + " game points.");
+		admin.sendMessage(player.getName() + "님의 총 아이템 몰 포인트는 " + player.getGamePoints() + "포인트입니다.");
 		return true;
 	}
 	

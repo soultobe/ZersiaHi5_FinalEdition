@@ -119,4 +119,5 @@ teleport,
 territories,
 territory_registrations,
 territory_spawnlist,
+item_mall_transactions,
 topic;

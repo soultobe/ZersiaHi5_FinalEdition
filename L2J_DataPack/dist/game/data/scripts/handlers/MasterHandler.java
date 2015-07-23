@@ -169,6 +169,7 @@ import handlers.itemhandlers.Book;
 import handlers.itemhandlers.Bypass;
 import handlers.itemhandlers.Calculator;
 import handlers.itemhandlers.CharmOfCourage;
+import handlers.itemhandlers.ClanPoint;
 import handlers.itemhandlers.Disguise;
 import handlers.itemhandlers.Elixir;
 import handlers.itemhandlers.EnchantAttribute;
@@ -506,6 +507,7 @@ public class MasterHandler
 			SpiritShot.class,
 			SummonItems.class,
 			TeleportBookmark.class,
+			ClanPoint.class,
 		},
 		{
 			// Punishment Handlers

@@ -245,6 +245,9 @@ public final class Config
 	public static float SATURDAY_RATE_SP;
 	public static float WEEK_RATE_CODE1;
 	public static float WEEK_RATE_CODE2;
+	// --------------------------------------------------
+	public static int CLANPOINT;
+	public static String CLANPOINT_MSG;
 	
 	// --------------------------------------------------
 	// Zersia Custom Message Settings
@@ -1672,6 +1675,9 @@ public final class Config
 			SATURDAY_RATE_SP = CustomSettings.getInt("SatRateSp", 2);
 			WEEK_RATE_CODE1 = CustomSettings.getInt("WeekCode1", 1);
 			WEEK_RATE_CODE2 = CustomSettings.getInt("WeekCode2", 7);
+			// ----------------------------------------------------------------
+			CLANPOINT = CustomSettings.getInt("ClanPoint", 100);
+			CLANPOINT_MSG = CustomSettings.getString("ClanPointMsg", "");
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

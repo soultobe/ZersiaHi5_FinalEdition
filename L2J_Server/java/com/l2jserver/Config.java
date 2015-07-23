@@ -152,7 +152,11 @@ public final class Config
 	public static int PARTYGO_ITEMID;
 	public static int PARTYGO_ITEMCOUNT;
 	public static boolean PARTYGO_ENABLE;
-	
+	// --------------------------------------------------
+	public static boolean ANTIBOT_ENABLE;
+	public static int ANTIBOT_LEVEL;
+	public static int ANTIBOT_INPUTTIME;
+	public static String ANTIBOT_MSG;
 	// --------------------------------------------------
 	// Zersia Custom Message Settings
 	// --------------------------------------------------
@@ -1486,6 +1490,11 @@ public final class Config
 			PARTYGO_ITEMID = CustomSettings.getInt("PartyGoItemId", 8615);
 			PARTYGO_ITEMCOUNT = CustomSettings.getInt("PartyGoItemCount", 1);
 			PARTYGO_ENABLE = CustomSettings.getBoolean("EnabledPartyGo", false);
+			// ----------------------------------------------------------------
+			ANTIBOT_ENABLE = CustomSettings.getBoolean("EnabledAntiBot", false);
+			ANTIBOT_LEVEL = CustomSettings.getInt("AntiBotLevel", 1);
+			ANTIBOT_INPUTTIME = CustomSettings.getInt("AntiBotInputTime", 1);
+			ANTIBOT_MSG = CustomSettings.getString("AntiBotMsg", "");
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

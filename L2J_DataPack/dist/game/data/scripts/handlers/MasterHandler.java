@@ -177,6 +177,7 @@ import handlers.itemhandlers.EnchantScrolls;
 import handlers.itemhandlers.EventItem;
 import handlers.itemhandlers.ExtractableItems;
 import handlers.itemhandlers.FishShots;
+import handlers.itemhandlers.GamePoint;
 import handlers.itemhandlers.Harvester;
 import handlers.itemhandlers.ItemSkills;
 import handlers.itemhandlers.ItemSkillsTemplate;
@@ -508,6 +509,7 @@ public class MasterHandler
 			SummonItems.class,
 			TeleportBookmark.class,
 			ClanPoint.class,
+			GamePoint.class,
 		},
 		{
 			// Punishment Handlers

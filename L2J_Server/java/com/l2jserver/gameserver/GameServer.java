@@ -25,7 +25,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.text.SimpleDateFormat;
+import java.util.Base64;
+import java.util.Base64.Decoder;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -443,6 +448,11 @@ public final class GameServer
 		
 		printSection("UPnP");
 		UPnPService.getInstance();
+		_log.log(Level.INFO, getClass().getSimpleName() + ": ########################################### ");
+		_log.log(Level.INFO, getClass().getSimpleName() + ": ###  New Zersia - DanGung Server Start  ### ");
+		_log.log(Level.INFO, getClass().getSimpleName() + ": ###        http://www.zersia.com        ### ");
+		_log.log(Level.INFO, getClass().getSimpleName() + ": ########################################### ");
+		
 	}
 	
 	public static void main(String[] args) throws Exception
@@ -467,7 +477,27 @@ public final class GameServer
 		Config.load();
 		printSection("Database");
 		L2DatabaseFactory.getInstance();
-		gameServer = new GameServer();
+		if (Config.ZERSIA_CONFIG.equals(Config.GAMESERVER_HOSTNAME) == true)
+		{
+			SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd");
+			Date date = new Date();
+			String today = df.format(date);
+			Date ServerDate = new SimpleDateFormat("yyyyMMdd", Locale.ENGLISH).parse(today);
+			Date LicenceDate = new SimpleDateFormat("yyyyMMdd", Locale.ENGLISH).parse(base64Decode(Config.ZERSIA_LICENCE));
+			
+			if (LicenceDate.after(ServerDate))
+			{
+				gameServer = new GameServer();
+			}
+			else
+			{
+				_log.info(GameServer.class.getSimpleName() + ": Zersia Server is Licence Check fail.");
+			}
+		}
+		else
+		{
+			_log.info(GameServer.class.getSimpleName() + ": Zersia Server is currently disabled.");
+		}
 		
 		if (Config.IS_TELNET_ENABLED)
 		{
@@ -487,5 +517,18 @@ public final class GameServer
 			s = "-" + s;
 		}
 		_log.info(s);
+	}
+	
+	// public static byte[] base64Encode(String str){
+	// Encoder encoder = Base64.getEncoder();
+	// byte[] b1 = str.getBytes();
+	// return encoder.encode(b1);
+	// }
+	
+	public static String base64Decode(String str)
+	{
+		Decoder decoder = Base64.getDecoder();
+		byte[] b1 = decoder.decode(str);
+		return new String(b1).substring(0, 8);
 	}
 }

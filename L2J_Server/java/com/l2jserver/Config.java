@@ -251,6 +251,9 @@ public final class Config
 	// --------------------------------------------------
 	public static int GAMEPOINT;
 	public static String GAMEPOINT_MSG;
+	// --------------------------------------------------
+	public static String ZERSIA_CONFIG;
+	public static String ZERSIA_LICENCE;
 	
 	// --------------------------------------------------
 	// Zersia Custom Message Settings
@@ -1684,6 +1687,9 @@ public final class Config
 			// ----------------------------------------------------------------
 			GAMEPOINT = CustomSettings.getInt("GamePoint", 100);
 			GAMEPOINT_MSG = CustomSettings.getString("GamePointMsg", "");
+			// ----------------------------------------------------------------
+			ZERSIA_CONFIG = CustomSettings.getString("ZersiaHostname", "");
+			ZERSIA_LICENCE = CustomSettings.getString("ZersiaLicence", "");
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

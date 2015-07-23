@@ -36,6 +36,7 @@ import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2RaidBossInstance;
+import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -145,6 +146,12 @@ public class RaidBossSpawnManager
 				info.set("respawnTime", 0L);
 				
 				_storedInfo.put(bossId, info);
+				if (Config.ANNOUNCE_SPAWN_RAIDBOSS)
+				{
+					String msg = "";
+					msg = Config.ANNOUNCE_SPAWN_RAIDBOSS_MSG.replace("$raidboss", raidboss.getName() + "(lv." + raidboss.getLevel() + ")");
+					Broadcast.toAllOnlinePlayers(msg);
+				}
 				
 				_log.info(getClass().getSimpleName() + ": Spawning Raid Boss " + raidboss.getName());
 				

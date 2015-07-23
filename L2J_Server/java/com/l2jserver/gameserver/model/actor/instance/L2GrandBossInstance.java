@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.instancemanager.RaidBossPointsManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -26,6 +27,7 @@ import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.entity.Hero;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -102,6 +104,12 @@ public final class L2GrandBossInstance extends L2MonsterInstance
 					Hero.getInstance().setRBkilled(player.getObjectId(), getId());
 				}
 			}
+		}
+		if (Config.GRANDBOSS_KILLED_ANNOUNCE)
+		{
+			String msg = "";
+			msg = Config.GRANDBOSS_KILLED_ANNOUNCE_MSG.replace("$player", killer.getName() + "(lv." + killer.getLevel() + ")").replace("$grandboss", this.getName() + "(lv." + this.getLevel() + ")");
+			Broadcast.toAllOnlinePlayers(msg);
 		}
 		return true;
 	}

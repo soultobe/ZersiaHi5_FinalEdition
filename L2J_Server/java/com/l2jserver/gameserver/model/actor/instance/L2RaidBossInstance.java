@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.entity.Hero;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -98,6 +99,12 @@ public class L2RaidBossInstance extends L2MonsterInstance
 					Hero.getInstance().setRBkilled(player.getObjectId(), getId());
 				}
 			}
+		}
+		if (Config.RAIDBOSS_KILLED_ANNOUNCE)
+		{
+			String msg = "";
+			msg = Config.RAIDBOSS_KILLED_ANNOUNCE_MSG.replace("$player", killer.getName() + "(lv." + killer.getLevel() + ")").replace("$raidboss", this.getName() + "(lv." + this.getLevel() + ")");
+			Broadcast.toAllOnlinePlayers(msg);
 		}
 		
 		RaidBossSpawnManager.getInstance().updateStatus(this, true);

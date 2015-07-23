@@ -126,6 +126,13 @@ public final class Config
 	public static int CUSTOM_STARTING_LOC_X;
 	public static int CUSTOM_STARTING_LOC_Y;
 	public static int CUSTOM_STARTING_LOC_Z;
+	// ---------------------------------------------------
+	public static boolean RAIDBOSS_KILLED_ANNOUNCE;
+	public static String RAIDBOSS_KILLED_ANNOUNCE_MSG;
+	public static boolean GRANDBOSS_KILLED_ANNOUNCE;
+	public static String GRANDBOSS_KILLED_ANNOUNCE_MSG;
+	public static boolean ANNOUNCE_SPAWN_RAIDBOSS;
+	public static String ANNOUNCE_SPAWN_RAIDBOSS_MSG;
 	
 	// --------------------------------------------------
 	// L2J Variable Definitions
@@ -1406,6 +1413,13 @@ public final class Config
 			CUSTOM_STARTING_LOC_X = CustomSettings.getInt("CustomStartingLocX", 82698);
 			CUSTOM_STARTING_LOC_Y = CustomSettings.getInt("CustomStartingLocY", 148638);
 			CUSTOM_STARTING_LOC_Z = CustomSettings.getInt("CustomStartingLocZ", -3473);
+			// ----------------------------------------------------------------
+			RAIDBOSS_KILLED_ANNOUNCE = CustomSettings.getBoolean("RaidBossKilledAnnounce", false);
+			RAIDBOSS_KILLED_ANNOUNCE_MSG = CustomSettings.getString("RaidBossKilledAnnounceMsg", "$player $raidboss kills.");
+			GRANDBOSS_KILLED_ANNOUNCE = CustomSettings.getBoolean("GrandBossKilledAnnounce", false);
+			GRANDBOSS_KILLED_ANNOUNCE_MSG = CustomSettings.getString("GrandBossKilledAnnounceMsg", "$player $grandboss kills.");
+			ANNOUNCE_SPAWN_RAIDBOSS = CustomSettings.getBoolean("AnnounceSpawnRaidBoss", false);
+			ANNOUNCE_SPAWN_RAIDBOSS_MSG = CustomSettings.getString("AnnounceSpawnRaidBossMsg", "$raidboss Spawn.");
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

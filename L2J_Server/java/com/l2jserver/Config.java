@@ -161,6 +161,20 @@ public final class Config
 	public static int CHGSEX_ITEMID;
 	public static int CHGSEX_ITEMCOUNT;
 	public static boolean CHGSEX_ENABLE;
+	// --------------------------------------------------
+	public static boolean SELFENCHANT_ENABLE;
+	public static int WEAPONMAX_ENCHANT;
+	public static int WEAPON_ITEM;
+	public static int WEAPON_ITEMCOUNT;
+	public static int ARMORMAX_ENCHANT;
+	public static int ARMOR_ITEM;
+	public static int ARMOR_ITEMCOUNT;
+	public static int JEWELSMAX_ENCHANT;
+	public static int JEWELS_ITEM;
+	public static int JEWELS_ITEMCOUNT;
+	public static int BELTSHIRTMAX_ENCHANT;
+	public static int BELTSHIRT_ITEM;
+	public static int BELTSHIRT_ITEMCOUNT;
 	
 	// --------------------------------------------------
 	// Zersia Custom Message Settings
@@ -1504,6 +1518,20 @@ public final class Config
 			CHGSEX_ITEMID = CustomSettings.getInt("ChgSexItemId", 57);
 			CHGSEX_ITEMCOUNT = CustomSettings.getInt("ChgSexItemCount", 1000000);
 			CHGSEX_ENABLE = CustomSettings.getBoolean("EnabledChgSex", false);
+			// ----------------------------------------------------------------
+			SELFENCHANT_ENABLE = CustomSettings.getBoolean("EnabledSelfEnchant", false);
+			WEAPONMAX_ENCHANT = CustomSettings.getInt("WeaponMaxEnchant", 15);
+			WEAPON_ITEM = CustomSettings.getInt("WeaponItem", 57);
+			WEAPON_ITEMCOUNT = CustomSettings.getInt("WeaponItemCount", 3000000);
+			ARMORMAX_ENCHANT = CustomSettings.getInt("ArmorMaxEnchant", 15);
+			ARMOR_ITEM = CustomSettings.getInt("ArmorItem", 57);
+			ARMOR_ITEMCOUNT = CustomSettings.getInt("ArmorItemCount", 1000000);
+			JEWELSMAX_ENCHANT = CustomSettings.getInt("JewelsMaxEnchant", 15);
+			JEWELS_ITEM = CustomSettings.getInt("JewelsItem", 57);
+			JEWELS_ITEMCOUNT = CustomSettings.getInt("JewelsItemCount", 1000000);
+			BELTSHIRTMAX_ENCHANT = CustomSettings.getInt("BeltShirtMaxEnchant", 15);
+			BELTSHIRT_ITEM = CustomSettings.getInt("BeltShirtItem", 57);
+			BELTSHIRT_ITEMCOUNT = CustomSettings.getInt("BeltShirtItemCount", 1000000);
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

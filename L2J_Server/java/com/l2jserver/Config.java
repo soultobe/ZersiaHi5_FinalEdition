@@ -158,6 +158,11 @@ public final class Config
 	public static int ANTIBOT_INPUTTIME;
 	public static String ANTIBOT_MSG;
 	// --------------------------------------------------
+	public static int CHGSEX_ITEMID;
+	public static int CHGSEX_ITEMCOUNT;
+	public static boolean CHGSEX_ENABLE;
+	
+	// --------------------------------------------------
 	// Zersia Custom Message Settings
 	// --------------------------------------------------
 	
@@ -1495,6 +1500,10 @@ public final class Config
 			ANTIBOT_LEVEL = CustomSettings.getInt("AntiBotLevel", 1);
 			ANTIBOT_INPUTTIME = CustomSettings.getInt("AntiBotInputTime", 1);
 			ANTIBOT_MSG = CustomSettings.getString("AntiBotMsg", "");
+			// ----------------------------------------------------------------
+			CHGSEX_ITEMID = CustomSettings.getInt("ChgSexItemId", 57);
+			CHGSEX_ITEMCOUNT = CustomSettings.getInt("ChgSexItemCount", 1000000);
+			CHGSEX_ENABLE = CustomSettings.getBoolean("EnabledChgSex", false);
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

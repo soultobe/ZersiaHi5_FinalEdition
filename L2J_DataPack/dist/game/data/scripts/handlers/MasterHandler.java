@@ -113,6 +113,7 @@ import handlers.bypasshandlers.Augment;
 import handlers.bypasshandlers.Buy;
 import handlers.bypasshandlers.BuyShadowItem;
 import handlers.bypasshandlers.ChatLink;
+import handlers.bypasshandlers.ChgSex;
 import handlers.bypasshandlers.ClanWarehouse;
 import handlers.bypasshandlers.EventEngine;
 import handlers.bypasshandlers.Festival;
@@ -442,6 +443,7 @@ public class MasterHandler
 			TutorialClose.class,
 			VoiceCommand.class,
 			Wear.class,
+			ChgSex.class,
 		},
 		{
 			// Chat Handlers

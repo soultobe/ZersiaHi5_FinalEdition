@@ -77,6 +77,7 @@ import handlers.admincommandhandlers.AdminMenu;
 import handlers.admincommandhandlers.AdminMessages;
 import handlers.admincommandhandlers.AdminMobGroup;
 import handlers.admincommandhandlers.AdminMonsterRace;
+import handlers.admincommandhandlers.AdminPCBangPoints;
 import handlers.admincommandhandlers.AdminPForge;
 import handlers.admincommandhandlers.AdminPathNode;
 import handlers.admincommandhandlers.AdminPcCondOverride;
@@ -180,6 +181,7 @@ import handlers.itemhandlers.ManaPotion;
 import handlers.itemhandlers.Maps;
 import handlers.itemhandlers.MercTicket;
 import handlers.itemhandlers.NicknameColor;
+import handlers.itemhandlers.PCCafePoint;
 import handlers.itemhandlers.PetFood;
 import handlers.itemhandlers.Recipes;
 import handlers.itemhandlers.RollingDice;
@@ -374,6 +376,7 @@ public class MasterHandler
 			AdminMobGroup.class,
 			AdminMonsterRace.class,
 			AdminPathNode.class,
+			AdminPCBangPoints.class,
 			AdminPetition.class,
 			AdminPForge.class,
 			AdminPledge.class,
@@ -402,6 +405,7 @@ public class MasterHandler
 			AdminVitality.class,
 			AdminZone.class,
 			AdminPrimePoints.class,
+		
 		},
 		{
 			// Bypass Handlers
@@ -487,6 +491,7 @@ public class MasterHandler
 			Maps.class,
 			MercTicket.class,
 			NicknameColor.class,
+			PCCafePoint.class,
 			PetFood.class,
 			Recipes.class,
 			RollingDice.class,

@@ -13739,10 +13739,22 @@ public final class SystemMessageId
 	public static final SystemMessageId YOU_CANNOT_REPORT_CHAR_AT_THIS_TIME_4;
 	
 	/**
+	 * //:Zersia ID: 2389<br>
+	 * Message: The maximum accumulation allowed of PC cafe points has been exceeded. You can no longer acquire PC cafe points.
+	 */
+	public static final SystemMessageId THE_MAXMIMUM_ACCUMULATION_ALLOWED_OF_PC_CAFE_POINTS_HAS_BEEN_EXCEEDED;
+	
+	/**
 	 * ID: 2390<br>
 	 * Message: Your number of My Teleports slots has reached its maximum limit.
 	 */
 	public static final SystemMessageId YOUR_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_REACHED_ITS_MAXIMUM_LIMIT;
+	
+	/**
+	 * //:Zersia ID: 2393<br>
+	 * Message: You have acquired $s1 PC Cafe points.
+	 */
+	public static final SystemMessageId YOU_HAVE_ACQUIRED_S1_PC_CAFE_POINTS;
 	
 	/**
 	 * ID: 2396<br>
@@ -17497,8 +17509,9 @@ public final class SystemMessageId
 		YOU_CANNOT_REPORT_CHAR_AT_THIS_TIME_2 = new SystemMessageId(2381);
 		YOU_CANNOT_REPORT_CHAR_AT_THIS_TIME_3 = new SystemMessageId(2382);
 		YOU_CANNOT_REPORT_CHAR_AT_THIS_TIME_4 = new SystemMessageId(2383);
-		
+		THE_MAXMIMUM_ACCUMULATION_ALLOWED_OF_PC_CAFE_POINTS_HAS_BEEN_EXCEEDED = new SystemMessageId(2389);
 		YOUR_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_REACHED_ITS_MAXIMUM_LIMIT = new SystemMessageId(2390);
+		YOU_HAVE_ACQUIRED_S1_PC_CAFE_POINTS = new SystemMessageId(2393);
 		PET_SKILL_CANNOT_BE_USED_RECHARCHING = new SystemMessageId(2396);
 		YOU_HAVE_NO_OPEN_MY_TELEPORTS_SLOTS = new SystemMessageId(2398);
 		C1_IS_ALREADY_REGISTERED_NON_CLASS_LIMITED_EVENT_TEAMS = new SystemMessageId(2440);

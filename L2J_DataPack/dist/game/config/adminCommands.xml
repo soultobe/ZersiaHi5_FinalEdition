@@ -287,6 +287,13 @@
 	<admin command="admin_subtract_game_points" accessLevel="7" />
 	<admin command="admin_reload_itemmall" accessLevel="7" />
 
+	<!-- ADMIN PCBANG -->
+	<admin command="admin_add_bang_points" accessLevel="7" />
+	<admin command="admin_count_bang_points" accessLevel="7" />
+	<admin command="admin_bangpoints" accessLevel="7" />
+	<admin command="admin_set_bang_points" accessLevel="7" />
+	<admin command="admin_subtract_bang_points" accessLevel="7" />
+
 	<!-- ADMIN GM -->
 	<admin command="admin_gm" accessLevel="7" />
 

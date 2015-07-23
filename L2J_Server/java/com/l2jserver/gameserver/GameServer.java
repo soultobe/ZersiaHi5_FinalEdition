@@ -112,6 +112,7 @@ import com.l2jserver.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jserver.gameserver.instancemanager.MailManager;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.instancemanager.MercTicketManager;
+import com.l2jserver.gameserver.instancemanager.PcCafePointsManager;
 import com.l2jserver.gameserver.instancemanager.PetitionManager;
 import com.l2jserver.gameserver.instancemanager.PunishmentManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
@@ -331,7 +332,7 @@ public final class GameServer
 		TerritoryWarManager.getInstance();
 		CastleManorManager.getInstance();
 		MercTicketManager.getInstance();
-		
+		PcCafePointsManager.getInstance();
 		QuestManager.getInstance().report();
 		
 		if (Config.SAVE_DROPPED_ITEM)

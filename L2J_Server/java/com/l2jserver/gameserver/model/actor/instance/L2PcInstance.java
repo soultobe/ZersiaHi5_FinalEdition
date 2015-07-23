@@ -354,7 +354,7 @@ public final class L2PcInstance extends L2Playable
 	
 	// Character Character SQL String Definitions:
 	private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,karma,fame,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,accesslevel,online,isin7sdungeon,clan_privs,wantspeace,base_class,newbie,nobless,power_grade,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,fame=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,newbie=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,language=?,game_points=? WHERE charId=?";
+	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,fame=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,newbie=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,language=?,game_points=?,pccafe_points=? WHERE charId=?";
 	private static final String RESTORE_CHARACTER = "SELECT * FROM characters WHERE charId=?";
 	
 	// Character Teleport Bookmark:
@@ -780,6 +780,7 @@ public final class L2PcInstance extends L2Playable
 	private double _originalMp = .0;
 	
 	private long _gamePoints;
+	private int _pcBangPoints = 0;
 	
 	/** Char Coords from Client */
 	private int _clientX;
@@ -6924,6 +6925,9 @@ public final class L2PcInstance extends L2Playable
 					// GamePoints
 					player.setGamePoints(rset.getLong("game_points"));
 					
+					// PcBangPoints
+					player.setPcBangPoints(rset.getInt("pccafe_points"));
+					
 					// Retrieve the name and ID of the other characters assigned to this account.
 					try (PreparedStatement stmt = con.prepareStatement("SELECT charId, char_name FROM characters WHERE account_name=? AND charId<>?"))
 					{
@@ -7361,7 +7365,8 @@ public final class L2PcInstance extends L2Playable
 			statement.setInt(48, getVitalityPoints());
 			statement.setString(49, getLang());
 			statement.setLong(50, getGamePoints());
-			statement.setInt(51, getObjectId());
+			statement.setInt(51, getPcBangPoints());
+			statement.setInt(52, getObjectId());
 			
 			statement.execute();
 		}
@@ -14070,6 +14075,23 @@ public final class L2PcInstance extends L2Playable
 	public void setGamePoints(long gamePoints)
 	{
 		_gamePoints = gamePoints;
+	}
+	
+	public int getPcBangPoints()
+	{
+		return _pcBangPoints;
+	}
+	
+	public void setPcBangPoints(final int i)
+	{
+		if (i < 2100000000)
+		{
+			_pcBangPoints = i;
+		}
+		else
+		{
+			_pcBangPoints = 2100000000;
+		}
 	}
 	
 	@Override

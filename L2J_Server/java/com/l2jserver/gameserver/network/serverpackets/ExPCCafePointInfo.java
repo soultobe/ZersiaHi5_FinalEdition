@@ -41,13 +41,13 @@ public class ExPCCafePointInfo extends L2GameServerPacket
 		_time = 0;
 	}
 	
-	public ExPCCafePointInfo(int points, int pointsToAdd, int time)
+	public ExPCCafePointInfo(int points, int pointsToAdd, boolean modify_points, boolean pointType, int time)
 	{
 		_points = points;
-		_mAddPoint = pointsToAdd;
+		_mAddPoint = modify_points ? pointsToAdd : pointsToAdd * -1;
 		_mPeriodType = 1;
 		_remainTime = 42; // No idea why but retail sends 42..
-		_pointType = pointsToAdd < 0 ? 3 : 0; // When using points is 3
+		_pointType = modify_points ? (pointType ? 0 : 1) : 2;
 		_time = time;
 		
 	}

@@ -70,6 +70,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExNevitAdventPointInfoPack
 import com.l2jserver.gameserver.network.serverpackets.ExNevitAdventTimeChange;
 import com.l2jserver.gameserver.network.serverpackets.ExNoticePostArrived;
 import com.l2jserver.gameserver.network.serverpackets.ExNotifyPremiumItem;
+import com.l2jserver.gameserver.network.serverpackets.ExPCCafePointInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExShowContactList;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.ExStorageMaxCount;
@@ -411,6 +412,18 @@ public class EnterWorld extends L2GameClientPacket
 		}
 		
 		activeChar.updateEffectIcons();
+		
+		if (Config.ENABLE_PC_BANG)
+		{
+			if (activeChar.getPcBangPoints() > 0)
+			{
+				activeChar.sendPacket(new ExPCCafePointInfo(activeChar.getPcBangPoints(), 0, false, false, 1));
+			}
+			else
+			{
+				activeChar.sendPacket(new ExPCCafePointInfo());
+			}
+		}
 		
 		activeChar.sendPacket(new EtcStatusUpdate(activeChar));
 		

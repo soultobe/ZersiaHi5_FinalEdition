@@ -133,6 +133,15 @@ public final class Config
 	public static String GRANDBOSS_KILLED_ANNOUNCE_MSG;
 	public static boolean ANNOUNCE_SPAWN_RAIDBOSS;
 	public static String ANNOUNCE_SPAWN_RAIDBOSS_MSG;
+	// ---------------------------------------------------
+	public static boolean ENABLE_PC_BANG;
+	public static int MAX_PC_BANG_POINTS;
+	public static boolean ENABLE_DOUBLE_PC_BANG_POINTS;
+	public static int DOUBLE_PC_BANG_POINTS_CHANCE;
+	public static double PC_BANG_POINT_RATE;
+	public static boolean RANDOM_PC_BANG_POINT;
+	public static boolean PC_BANG_REWARD_LOW_EXP_KILLS;
+	public static int PC_BANG_LOW_EXP_KILLS_CHANCE;
 	
 	// --------------------------------------------------
 	// L2J Variable Definitions
@@ -1420,6 +1429,32 @@ public final class Config
 			GRANDBOSS_KILLED_ANNOUNCE_MSG = CustomSettings.getString("GrandBossKilledAnnounceMsg", "$player $grandboss kills.");
 			ANNOUNCE_SPAWN_RAIDBOSS = CustomSettings.getBoolean("AnnounceSpawnRaidBoss", false);
 			ANNOUNCE_SPAWN_RAIDBOSS_MSG = CustomSettings.getString("AnnounceSpawnRaidBossMsg", "$raidboss Spawn.");
+			// ----------------------------------------------------------------
+			ENABLE_PC_BANG = CustomSettings.getBoolean("EnabledPcBang", true);
+			MAX_PC_BANG_POINTS = CustomSettings.getInt("MaxPcBangPoints", 2100000000);
+			
+			if (MAX_PC_BANG_POINTS < 0)
+			{
+				MAX_PC_BANG_POINTS = 0;
+			}
+			RANDOM_PC_BANG_POINT = CustomSettings.getBoolean("AcquisitionPointsRandom", false);
+			ENABLE_DOUBLE_PC_BANG_POINTS = CustomSettings.getBoolean("DoublingAcquisitionPoints", true);
+			DOUBLE_PC_BANG_POINTS_CHANCE = CustomSettings.getInt("DoublingAcquisitionPointsChance", 1);
+			if ((DOUBLE_PC_BANG_POINTS_CHANCE < 0) || (DOUBLE_PC_BANG_POINTS_CHANCE > 100))
+			{
+				DOUBLE_PC_BANG_POINTS_CHANCE = 1;
+			}
+			PC_BANG_POINT_RATE = CustomSettings.getDouble("AcquisitionPointsRate", 1.0);
+			if (PC_BANG_POINT_RATE < 0)
+			{
+				PC_BANG_POINT_RATE = 1;
+			}
+			PC_BANG_REWARD_LOW_EXP_KILLS = CustomSettings.getBoolean("RewardLowExpKills", true);
+			PC_BANG_LOW_EXP_KILLS_CHANCE = CustomSettings.getInt("RewardLowExpKillsChance", 50);
+			if ((PC_BANG_LOW_EXP_KILLS_CHANCE < 0) || (PC_BANG_LOW_EXP_KILLS_CHANCE > 100))
+			{
+				PC_BANG_LOW_EXP_KILLS_CHANCE = 1;
+			}
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

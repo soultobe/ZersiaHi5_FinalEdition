@@ -40,6 +40,7 @@ import com.l2jserver.gameserver.datatables.EventDroplist.DateDrop;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
+import com.l2jserver.gameserver.instancemanager.PcCafePointsManager;
 import com.l2jserver.gameserver.instancemanager.WalkingManager;
 import com.l2jserver.gameserver.model.AbsorberInfo;
 import com.l2jserver.gameserver.model.AggroInfo;
@@ -496,6 +497,7 @@ public class L2Attackable extends L2Npc
 								if (addexp > 0)
 								{
 									attacker.updateVitalityPoints(getVitalityPoints(damage), true, false);
+									PcCafePointsManager.getInstance().givePcCafePoint((attacker), addexp);
 								}
 							}
 						}
@@ -989,7 +991,7 @@ public class L2Attackable extends L2Npc
 				}
 				
 				// Broadcast message if RaidBoss was defeated
-				if (isRaid() && !isRaidMinion() && drop.getCount() > 0)
+				if (isRaid() && !isRaidMinion() && (drop.getCount() > 0))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DIED_DROPPED_S3_S2);
 					sm.addCharName(this);

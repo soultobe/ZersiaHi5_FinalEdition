@@ -189,6 +189,20 @@ public final class Config
 	public static int MAXBELTSHIRTMAX_ENCHANT;
 	public static int MAXBELTSHIRT_ITEM;
 	public static int MAXBELTSHIRT_ITEMCOUNT;
+	// --------------------------------------------------
+	public static boolean LOTOENCHANT_ENABLE;
+	public static int LOTOWEAPONMAX_ENCHANT;
+	public static int LOTOWEAPON_ITEM;
+	public static int LOTOWEAPON_ITEMCOUNT;
+	public static int LOTOARMORMAX_ENCHANT;
+	public static int LOTOARMOR_ITEM;
+	public static int LOTOARMOR_ITEMCOUNT;
+	public static int LOTOJEWELSMAX_ENCHANT;
+	public static int LOTOJEWELS_ITEM;
+	public static int LOTOJEWELS_ITEMCOUNT;
+	public static int LOTOBELTSHIRTMAX_ENCHANT;
+	public static int LOTOBELTSHIRT_ITEM;
+	public static int LOTOBELTSHIRT_ITEMCOUNT;
 	
 	// --------------------------------------------------
 	// Zersia Custom Message Settings
@@ -1560,6 +1574,20 @@ public final class Config
 			MAXBELTSHIRTMAX_ENCHANT = CustomSettings.getInt("MaxBeltShirtMaxEnchant", 35);
 			MAXBELTSHIRT_ITEM = CustomSettings.getInt("MaxBeltShirtItem", 99761);
 			MAXBELTSHIRT_ITEMCOUNT = CustomSettings.getInt("MaxBeltShirtItemCount", 100);
+			// ----------------------------------------------------------------
+			LOTOENCHANT_ENABLE = CustomSettings.getBoolean("EnabledLotoEnchant", false);
+			LOTOWEAPONMAX_ENCHANT = CustomSettings.getInt("LotoWeaponMaxEnchant", 35);
+			LOTOWEAPON_ITEM = CustomSettings.getInt("LotoWeaponItem", 99761);
+			LOTOWEAPON_ITEMCOUNT = CustomSettings.getInt("LotoWeaponItemCount", 30);
+			LOTOARMORMAX_ENCHANT = CustomSettings.getInt("LotoArmorMaxEnchant", 35);
+			LOTOARMOR_ITEM = CustomSettings.getInt("LotoArmorItem", 99761);
+			LOTOARMOR_ITEMCOUNT = CustomSettings.getInt("LotoArmorItemCount", 10);
+			LOTOJEWELSMAX_ENCHANT = CustomSettings.getInt("LotoJewelsMaxEnchant", 35);
+			LOTOJEWELS_ITEM = CustomSettings.getInt("LotoJewelsItem", 99761);
+			LOTOJEWELS_ITEMCOUNT = CustomSettings.getInt("LotoJewelsItemCount", 10);
+			LOTOBELTSHIRTMAX_ENCHANT = CustomSettings.getInt("LotoBeltShirtMaxEnchant", 35);
+			LOTOBELTSHIRT_ITEM = CustomSettings.getInt("LotoBeltShirtItem", 99761);
+			LOTOBELTSHIRT_ITEMCOUNT = CustomSettings.getInt("LotoBeltShirtItemCount", 10);
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

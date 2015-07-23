@@ -338,6 +338,14 @@ public final class CharacterCreate extends L2GameClientPacket
 		{
 			newChar.getStat().addSp(Config.STARTING_SP);
 		}
+		if (Config.CUSTOM_STARTING_PC_BANG_POINT > 0)
+		{
+			newChar.setPcBangPoints(Config.CUSTOM_STARTING_PC_BANG_POINT);
+		}
+		if (Config.CUSTOM_STARTING_GAME_POINT > 0)
+		{
+			newChar.setGamePoints(Config.CUSTOM_STARTING_GAME_POINT);
+		}
 		
 		final List<PcItemTemplate> initialItems = InitialEquipmentData.getInstance().getEquipmentList(newChar.getClassId());
 		if (initialItems != null)

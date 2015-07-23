@@ -142,6 +142,9 @@ public final class Config
 	public static boolean RANDOM_PC_BANG_POINT;
 	public static boolean PC_BANG_REWARD_LOW_EXP_KILLS;
 	public static int PC_BANG_LOW_EXP_KILLS_CHANCE;
+	// --------------------------------------------------
+	public static int CUSTOM_STARTING_PC_BANG_POINT;
+	public static int CUSTOM_STARTING_GAME_POINT;
 	
 	// --------------------------------------------------
 	// L2J Variable Definitions
@@ -1454,6 +1457,17 @@ public final class Config
 			if ((PC_BANG_LOW_EXP_KILLS_CHANCE < 0) || (PC_BANG_LOW_EXP_KILLS_CHANCE > 100))
 			{
 				PC_BANG_LOW_EXP_KILLS_CHANCE = 1;
+			}
+			// ----------------------------------------------------------------
+			CUSTOM_STARTING_PC_BANG_POINT = CustomSettings.getInt("CustomStartingPcBangPoints", 0);
+			if ((CUSTOM_STARTING_PC_BANG_POINT < 0) || (CUSTOM_STARTING_PC_BANG_POINT > 2100000000))
+			{
+				CUSTOM_STARTING_PC_BANG_POINT = 0;
+			}
+			CUSTOM_STARTING_GAME_POINT = CustomSettings.getInt("CustomStartingGamePoints", 0);
+			if (CUSTOM_STARTING_GAME_POINT < 0)
+			{
+				CUSTOM_STARTING_GAME_POINT = 0;
 			}
 			
 			// Load Character L2Properties file (if exists)

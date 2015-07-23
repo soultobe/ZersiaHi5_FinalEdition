@@ -208,6 +208,31 @@ public final class Config
 	public static int EVENT_ENCHANT;
 	public static int EVENT_ENCHANTITEM;
 	public static int EVENT_ENCHANTITEMCOUNT;
+	// --------------------------------------------------
+	public static boolean EVENTGAMBLE_ENABLE;
+	public static int GAMBLERANKSET;
+	public static int GAMBLEITEM;
+	public static int GAMBLEITEMCOUNT;
+	public static int GAMBLERANKITEM01;
+	public static int GAMBLERANKITEMCOUNT01;
+	public static int GAMBLERANKITEM02;
+	public static int GAMBLERANKITEMCOUNT02;
+	public static int GAMBLERANKITEM03;
+	public static int GAMBLERANKITEMCOUNT03;
+	public static int GAMBLERANKITEM04;
+	public static int GAMBLERANKITEMCOUNT04;
+	public static int GAMBLERANKITEM05;
+	public static int GAMBLERANKITEMCOUNT05;
+	public static int GAMBLERANKITEM06;
+	public static int GAMBLERANKITEMCOUNT06;
+	public static int GAMBLERANKITEM07;
+	public static int GAMBLERANKITEMCOUNT07;
+	public static int GAMBLERANKITEM08;
+	public static int GAMBLERANKITEMCOUNT08;
+	public static int GAMBLERANKITEM09;
+	public static int GAMBLERANKITEMCOUNT09;
+	public static int GAMBLERANKITEM10;
+	public static int GAMBLERANKITEMCOUNT10;
 	
 	// --------------------------------------------------
 	// Zersia Custom Message Settings
@@ -1598,6 +1623,31 @@ public final class Config
 			EVENT_ENCHANT = CustomSettings.getInt("EventEnchant", 2);
 			EVENT_ENCHANTITEM = CustomSettings.getInt("EventEnchantItem", 99760);
 			EVENT_ENCHANTITEMCOUNT = CustomSettings.getInt("EventEnchantItemCount", 1);
+			// ----------------------------------------------------------------
+			EVENTGAMBLE_ENABLE = CustomSettings.getBoolean("EventGambleEnabled", false);
+			GAMBLERANKSET = CustomSettings.getInt("EventGambleRankSet", 10);
+			GAMBLEITEM = CustomSettings.getInt("EventGambleItem", 99759);
+			GAMBLEITEMCOUNT = CustomSettings.getInt("EventGambleItemCount", 1);
+			GAMBLERANKITEM01 = CustomSettings.getInt("EventGambleRankItem01", 57);
+			GAMBLERANKITEMCOUNT01 = CustomSettings.getInt("EventGambleRankItemCount01", 1);
+			GAMBLERANKITEM02 = CustomSettings.getInt("EventGambleRankItem02", 57);
+			GAMBLERANKITEMCOUNT02 = CustomSettings.getInt("EventGambleRankItemCount02", 1);
+			GAMBLERANKITEM03 = CustomSettings.getInt("EventGambleRankItem03", 57);
+			GAMBLERANKITEMCOUNT03 = CustomSettings.getInt("EventGambleRankItemCount03", 1);
+			GAMBLERANKITEM04 = CustomSettings.getInt("EventGambleRankItem04", 57);
+			GAMBLERANKITEMCOUNT04 = CustomSettings.getInt("EventGambleRankItemCount04", 1);
+			GAMBLERANKITEM05 = CustomSettings.getInt("EventGambleRankItem05", 57);
+			GAMBLERANKITEMCOUNT05 = CustomSettings.getInt("EventGambleRankItemCount05", 1);
+			GAMBLERANKITEM06 = CustomSettings.getInt("EventGambleRankItem06", 57);
+			GAMBLERANKITEMCOUNT06 = CustomSettings.getInt("EventGambleRankItemCount06", 1);
+			GAMBLERANKITEM07 = CustomSettings.getInt("EventGambleRankItem07", 57);
+			GAMBLERANKITEMCOUNT07 = CustomSettings.getInt("EventGambleRankItemCount07", 1);
+			GAMBLERANKITEM08 = CustomSettings.getInt("EventGambleRankItem08", 57);
+			GAMBLERANKITEMCOUNT08 = CustomSettings.getInt("EventGambleRankItemCount08", 1);
+			GAMBLERANKITEM09 = CustomSettings.getInt("EventGambleRankItem09", 57);
+			GAMBLERANKITEMCOUNT09 = CustomSettings.getInt("EventGambleRankItemCount09", 1);
+			GAMBLERANKITEM10 = CustomSettings.getInt("EventGambleRankItem10", 57);
+			GAMBLERANKITEMCOUNT10 = CustomSettings.getInt("EventGambleRankItemCount10", 1);
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

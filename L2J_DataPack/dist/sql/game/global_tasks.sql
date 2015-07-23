@@ -8,3 +8,6 @@ CREATE TABLE IF NOT EXISTS `global_tasks` (
   `param3` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `global_tasks` VALUES
+(9,'Restart','TYPE_GLOBAL_TASK',1432331701179,'1','06:55:00','300'); -- Server Restart

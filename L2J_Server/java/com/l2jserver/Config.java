@@ -175,6 +175,20 @@ public final class Config
 	public static int BELTSHIRTMAX_ENCHANT;
 	public static int BELTSHIRT_ITEM;
 	public static int BELTSHIRT_ITEMCOUNT;
+	// --------------------------------------------------
+	public static boolean MAXENCHANT_ENABLE;
+	public static int MAXWEAPONMAX_ENCHANT;
+	public static int MAXWEAPON_ITEM;
+	public static int MAXWEAPON_ITEMCOUNT;
+	public static int MAXARMORMAX_ENCHANT;
+	public static int MAXARMOR_ITEM;
+	public static int MAXARMOR_ITEMCOUNT;
+	public static int MAXJEWELSMAX_ENCHANT;
+	public static int MAXJEWELS_ITEM;
+	public static int MAXJEWELS_ITEMCOUNT;
+	public static int MAXBELTSHIRTMAX_ENCHANT;
+	public static int MAXBELTSHIRT_ITEM;
+	public static int MAXBELTSHIRT_ITEMCOUNT;
 	
 	// --------------------------------------------------
 	// Zersia Custom Message Settings
@@ -1532,6 +1546,20 @@ public final class Config
 			BELTSHIRTMAX_ENCHANT = CustomSettings.getInt("BeltShirtMaxEnchant", 15);
 			BELTSHIRT_ITEM = CustomSettings.getInt("BeltShirtItem", 57);
 			BELTSHIRT_ITEMCOUNT = CustomSettings.getInt("BeltShirtItemCount", 1000000);
+			// ----------------------------------------------------------------
+			MAXENCHANT_ENABLE = CustomSettings.getBoolean("EnabledMaxEnchant", false);
+			MAXWEAPONMAX_ENCHANT = CustomSettings.getInt("MaxWeaponMaxEnchant", 35);
+			MAXWEAPON_ITEM = CustomSettings.getInt("MaxWeaponItem", 99761);
+			MAXWEAPON_ITEMCOUNT = CustomSettings.getInt("MaxWeaponItemCount", 300);
+			MAXARMORMAX_ENCHANT = CustomSettings.getInt("MaxArmorMaxEnchant", 35);
+			MAXARMOR_ITEM = CustomSettings.getInt("MaxArmorItem", 99761);
+			MAXARMOR_ITEMCOUNT = CustomSettings.getInt("MaxArmorItemCount", 100);
+			MAXJEWELSMAX_ENCHANT = CustomSettings.getInt("MaxJewelsMaxEnchant", 35);
+			MAXJEWELS_ITEM = CustomSettings.getInt("MaxJewelsItem", 99761);
+			MAXJEWELS_ITEMCOUNT = CustomSettings.getInt("MaxJewelsItemCount", 100);
+			MAXBELTSHIRTMAX_ENCHANT = CustomSettings.getInt("MaxBeltShirtMaxEnchant", 35);
+			MAXBELTSHIRT_ITEM = CustomSettings.getInt("MaxBeltShirtItem", 99761);
+			MAXBELTSHIRT_ITEMCOUNT = CustomSettings.getInt("MaxBeltShirtItemCount", 100);
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

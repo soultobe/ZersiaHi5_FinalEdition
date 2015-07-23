@@ -203,6 +203,11 @@ public final class Config
 	public static int LOTOBELTSHIRTMAX_ENCHANT;
 	public static int LOTOBELTSHIRT_ITEM;
 	public static int LOTOBELTSHIRT_ITEMCOUNT;
+	// --------------------------------------------------
+	public static boolean EVENTENCHANT_ENABLE;
+	public static int EVENT_ENCHANT;
+	public static int EVENT_ENCHANTITEM;
+	public static int EVENT_ENCHANTITEMCOUNT;
 	
 	// --------------------------------------------------
 	// Zersia Custom Message Settings
@@ -1588,6 +1593,11 @@ public final class Config
 			LOTOBELTSHIRTMAX_ENCHANT = CustomSettings.getInt("LotoBeltShirtMaxEnchant", 35);
 			LOTOBELTSHIRT_ITEM = CustomSettings.getInt("LotoBeltShirtItem", 99761);
 			LOTOBELTSHIRT_ITEMCOUNT = CustomSettings.getInt("LotoBeltShirtItemCount", 10);
+			// ----------------------------------------------------------------
+			EVENTENCHANT_ENABLE = CustomSettings.getBoolean("EventEnchantEnabled", false);
+			EVENT_ENCHANT = CustomSettings.getInt("EventEnchant", 2);
+			EVENT_ENCHANTITEM = CustomSettings.getInt("EventEnchantItem", 99760);
+			EVENT_ENCHANTITEMCOUNT = CustomSettings.getInt("EventEnchantItemCount", 1);
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

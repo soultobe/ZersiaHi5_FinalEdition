@@ -240,6 +240,11 @@ public final class Config
 	public static int GMGIFT_RUNNING_TIME;
 	public static String GMGIFT_MSG;
 	public static String ONLINEUSER_MSG;
+	// --------------------------------------------------
+	public static float SATURDAY_RATE_XP;
+	public static float SATURDAY_RATE_SP;
+	public static float WEEK_RATE_CODE1;
+	public static float WEEK_RATE_CODE2;
 	
 	// --------------------------------------------------
 	// Zersia Custom Message Settings
@@ -1662,6 +1667,11 @@ public final class Config
 			GMGIFT_RUNNING_TIME = CustomSettings.getInt("GmGiftRunningTime", 1800);
 			GMGIFT_MSG = CustomSettings.getString("GmGiftMsg", "");
 			ONLINEUSER_MSG = CustomSettings.getString("OnLineUserMsg", "");
+			// ----------------------------------------------------------------
+			SATURDAY_RATE_XP = CustomSettings.getInt("SatRateXp", 2);
+			SATURDAY_RATE_SP = CustomSettings.getInt("SatRateSp", 2);
+			WEEK_RATE_CODE1 = CustomSettings.getInt("WeekCode1", 1);
+			WEEK_RATE_CODE2 = CustomSettings.getInt("WeekCode2", 7);
 			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

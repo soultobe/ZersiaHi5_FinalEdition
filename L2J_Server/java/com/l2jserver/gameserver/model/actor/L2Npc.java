@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.model.actor;
 import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -1288,7 +1289,17 @@ public class L2Npc extends L2Character
 	 */
 	public long getExpReward()
 	{
-		return (long) (getLevel() * getLevel() * getTemplate().getExpRate() * Config.RATE_XP);
+		long lngExpReward = 0;
+		
+		if ((Config.WEEK_RATE_CODE1 == Calendar.DAY_OF_WEEK) || (Config.WEEK_RATE_CODE2 == Calendar.DAY_OF_WEEK))
+		{
+			lngExpReward = (long) (getLevel() * getLevel() * getTemplate().getExpRate() * Config.RATE_XP * Config.SATURDAY_RATE_XP);
+		}
+		else
+		{
+			lngExpReward = (long) (getLevel() * getLevel() * getTemplate().getExpRate() * Config.RATE_XP);
+		}
+		return lngExpReward;
 	}
 	
 	/**
@@ -1296,7 +1307,16 @@ public class L2Npc extends L2Character
 	 */
 	public int getSpReward()
 	{
-		return (int) (getTemplate().getSP() * Config.RATE_SP);
+		int intSpReward = 0;
+		if ((Config.WEEK_RATE_CODE1 == Calendar.DAY_OF_WEEK) || (Config.WEEK_RATE_CODE2 == Calendar.DAY_OF_WEEK))
+		{
+			intSpReward = (int) (getTemplate().getSP() * Config.RATE_SP * Config.SATURDAY_RATE_SP);
+		}
+		else
+		{
+			intSpReward = (int) (getTemplate().getSP() * Config.RATE_SP);
+		}
+		return intSpReward;
 	}
 	
 	/**

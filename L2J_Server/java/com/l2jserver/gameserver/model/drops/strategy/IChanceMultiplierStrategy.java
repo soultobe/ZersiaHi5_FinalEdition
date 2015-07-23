@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.model.drops.strategy;
 
+import java.util.Calendar;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -60,7 +62,14 @@ public interface IChanceMultiplierStrategy
 			Float dropChanceMultiplier = Config.RATE_DROP_CHANCE_MULTIPLIER.get(item.getItemId());
 			if (dropChanceMultiplier != null)
 			{
-				multiplier *= dropChanceMultiplier;
+				if ((Config.WEEK_RATE_CODE1 == Calendar.DAY_OF_WEEK) || (Config.WEEK_RATE_CODE2 == Calendar.DAY_OF_WEEK))
+				{
+					multiplier *= (dropChanceMultiplier * Config.SATURDAY_RATE_SP);
+				}
+				else
+				{
+					multiplier *= dropChanceMultiplier;
+				}
 			}
 			else if (ItemTable.getInstance().getTemplate(item.getItemId()).hasExImmediateEffect())
 			{

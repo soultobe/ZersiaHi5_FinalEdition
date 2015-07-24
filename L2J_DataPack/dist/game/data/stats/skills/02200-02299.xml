@@ -1884,7 +1884,7 @@
 	</skill>
 	<skill id="2286" levels="6" name="Scroll: Recovery">
 		<!-- Confirmed CT2.5 -->
-		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
+		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;99 </table>
 		<table name="#itemConsumeId"> 8594 8595 8596 8597 8598 8599 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1907,7 +1907,7 @@
 	<skill id="2287" levels="6" name="Elixir of Life">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 250 650 1100 1500 1900 2300 </table>
-		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
+		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;99 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1925,7 +1925,7 @@
 	<skill id="2288" levels="6" name="Elixir of Mental Strength">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 60 140 220 290 360 420 </table>
-		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
+		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;99 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1943,7 +1943,7 @@
 	<skill id="2289" levels="6" name="Elixir of CP">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 150 350 600 800 1000 1200 </table>
-		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
+		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;99 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />

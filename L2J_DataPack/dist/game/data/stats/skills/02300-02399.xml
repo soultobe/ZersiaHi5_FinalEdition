@@ -118,7 +118,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
-			<player levelRange="76;85" />
+			<player levelRange="76;99" />
 		</cond>
 		<for>
 			<effect name="GiveSp">
@@ -134,7 +134,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="1902">
-			<player levelRange="61;85" />
+			<player levelRange="61;99" />
 		</cond>
 		<for>
 			<effect name="DispelBySlotProbability">

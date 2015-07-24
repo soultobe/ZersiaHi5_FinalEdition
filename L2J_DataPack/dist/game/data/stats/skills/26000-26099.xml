@@ -323,7 +323,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Level 1 doesn't exist in client. -->
 		<table name="#amount"> 0 350 600 800 1000 1200 </table>
-		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
+		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;99 </table>
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -343,7 +343,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Level 1 doesn't exist in client. -->
 		<table name="#amount"> 0 650 1100 1500 1900 2300 </table>
-		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
+		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;99 </table>
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />

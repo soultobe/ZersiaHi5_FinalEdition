@@ -744,5 +744,47 @@
 			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
+		<level val="86">
+		<hp>3987.8</hp>	
+		<mp>1779.5</mp>	<cp>1993.92</cp><hpRegen>9.9</hpRegen><mpRegen>3.0</mpRegen><cpRegen>8.5</cpRegen></level>
+		<level val="87">
+		<hp>4067.6</hp>	
+		<mp>1815.0</mp>	<cp>2033.80</cp><hpRegen>9.9</hpRegen><mpRegen>3.0</mpRegen><cpRegen>8.5</cpRegen></level>
+		<level val="88">
+		<hp>4149.0</hp>	
+		<mp>1851.3</mp>	<cp>2074.48</cp><hpRegen>9.9</hpRegen><mpRegen>3.0</mpRegen><cpRegen>8.5</cpRegen></level>
+		<level val="89">
+		<hp>4231.9</hp>	
+		<mp>1888.4</mp>	<cp>2115.97</cp><hpRegen>9.9</hpRegen><mpRegen>3.0</mpRegen><cpRegen>8.5</cpRegen></level>
+		<level val="90">
+		<hp>4316.6</hp>	
+		<mp>1926.1</mp>	<cp>2158.28</cp><hpRegen>9.9</hpRegen><mpRegen>3.0</mpRegen><cpRegen>8.5</cpRegen></level>
+		<level val="91">
+		<hp>4402.9</hp>	
+		<mp>1964.7</mp>	<cp>2201.45</cp><hpRegen>9.9</hpRegen><mpRegen>3.0</mpRegen><cpRegen>8.5</cpRegen></level>
+		<level val="92">
+		<hp>4491.0</hp>	
+		<mp>2004.0</mp>	<cp>2245.48</cp><hpRegen>9.9</hpRegen><mpRegen>3.0</mpRegen><cpRegen>8.5</cpRegen></level>
+		<level val="93">
+		<hp>4580.8</hp>	
+		<mp>2044.0</mp>	<cp>2290.39</cp><hpRegen>9.9</hpRegen><mpRegen>3.0</mpRegen><cpRegen>8.5</cpRegen></level>
+		<level val="94">
+		<hp>4672.4</hp>	
+		<mp>2084.9</mp>	<cp>2336.20</cp><hpRegen>9.9</hpRegen><mpRegen>3.0</mpRegen><cpRegen>8.5</cpRegen></level>
+		<level val="95">
+		<hp>4765.8</hp>	
+		<mp>2126.6</mp>	<cp>2382.92</cp><hpRegen>9.9</hpRegen><mpRegen>3.0</mpRegen><cpRegen>8.5</cpRegen></level>
+		<level val="96">
+		<hp>4861.2</hp>	
+		<mp>2169.1</mp>	<cp>2430.58</cp><hpRegen>9.9</hpRegen><mpRegen>3.0</mpRegen><cpRegen>8.5</cpRegen></level>
+		<level val="97">
+		<hp>4958.4</hp>	
+		<mp>2212.5</mp>	<cp>2479.19</cp><hpRegen>9.9</hpRegen><mpRegen>3.0</mpRegen><cpRegen>8.5</cpRegen></level>
+		<level val="98">
+		<hp>5057.5</hp>	
+		<mp>2256.8</mp>	<cp>2528.77</cp><hpRegen>9.9</hpRegen><mpRegen>3.0</mpRegen><cpRegen>8.5</cpRegen></level>
+		<level val="99">
+		<hp>5158.7</hp>	
+		<mp>2301.9</mp>	<cp>2579.35</cp><hpRegen>9.9</hpRegen><mpRegen>3.0</mpRegen><cpRegen>8.5</cpRegen></level>
 	</lvlUpgainData>
 </list>

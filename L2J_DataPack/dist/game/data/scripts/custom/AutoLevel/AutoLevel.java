@@ -71,7 +71,7 @@ public final class AutoLevel extends AbstractNpcAI
 		if (Config.ANTIBOT_ENABLE == true)
 		{
 			monKillCount++;
-			if (monKillCount == CHANCE)
+			if (monKillCount >= CHANCE)
 			{
 				// Effect :
 				if (!killer.getVariables().hasVariable("BOT_KICK_TASK"))

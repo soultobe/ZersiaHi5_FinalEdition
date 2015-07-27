@@ -70,7 +70,7 @@
 		<set name="affectRange" val="1000" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="676" />
-		<set name="hitTime" val="2500" />
+		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1374" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="80" />
@@ -99,7 +99,7 @@
 		<set name="affectRange" val="1000" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="676" />
-		<set name="hitTime" val="2500" />
+		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1374" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="80" />
@@ -123,11 +123,11 @@
 	<skill id="10006" levels="1" name="히로익 인스팅트">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="15" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="INSTINCT" />
 		<set name="affectRange" val="600" />
 		<set name="effectPoint" val="549" />
-		<set name="hitTime" val="2500" />
+		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1476" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="58" />
@@ -149,11 +149,11 @@
 	<skill id="10007" levels="1" name="히로익 임펄스">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="15" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="INSTINCT" />
 		<set name="affectRange" val="600" />
 		<set name="effectPoint" val="646" />
-		<set name="hitTime" val="2500" />
+		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1477" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="72" />

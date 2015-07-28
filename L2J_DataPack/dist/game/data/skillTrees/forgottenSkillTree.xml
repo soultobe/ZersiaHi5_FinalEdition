@@ -100,6 +100,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Dreadnought -->
 	<skillTree type="classSkillTree" classId="89">
@@ -116,6 +117,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Phoenix Knight -->
 	<skillTree type="classSkillTree" classId="90">
@@ -135,6 +137,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Hell Knight -->
 	<skillTree type="classSkillTree" classId="91">
@@ -154,6 +157,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Sagittarius -->
 	<skillTree type="classSkillTree" classId="92">
@@ -170,6 +174,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Adventurer -->
 	<skillTree type="classSkillTree" classId="93">
@@ -188,6 +193,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Archmage -->
 	<skillTree type="classSkillTree" classId="94">
@@ -203,6 +209,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Soultaker -->
 	<skillTree type="classSkillTree" classId="95">
@@ -218,6 +225,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Arcana Lord -->
 	<skillTree type="classSkillTree" classId="96">
@@ -234,6 +242,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Cardinal -->
 	<skillTree type="classSkillTree" classId="97">
@@ -249,6 +258,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Hierophant -->
 	<skillTree type="classSkillTree" classId="98">
@@ -264,6 +274,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Evas Templar -->
 	<skillTree type="classSkillTree" classId="99">
@@ -282,6 +293,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Sword Muse -->
 	<skillTree type="classSkillTree" classId="100">
@@ -299,6 +311,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Wind Rider -->
 	<skillTree type="classSkillTree" classId="101">
@@ -317,6 +330,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Moonlight Sentinel -->
 	<skillTree type="classSkillTree" classId="102">
@@ -333,6 +347,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Mystic Muse -->
 	<skillTree type="classSkillTree" classId="103">
@@ -348,6 +363,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Elemental Master -->
 	<skillTree type="classSkillTree" classId="104">
@@ -364,6 +380,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Eva's Saint -->
 	<skillTree type="classSkillTree" classId="105">
@@ -379,6 +396,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Shillien Templar -->
 	<skillTree type="classSkillTree" classId="106">
@@ -397,6 +415,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Spectral Dancer -->
 	<skillTree type="classSkillTree" classId="107">
@@ -414,6 +433,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Ghost Hunter -->
 	<skillTree type="classSkillTree" classId="108">
@@ -432,6 +452,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Phantom Ranger -->
 	<skillTree type="classSkillTree" classId="109">
@@ -448,6 +469,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Storm Screamer -->
 	<skillTree type="classSkillTree" classId="110">
@@ -463,6 +485,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Spectral Master -->
 	<skillTree type="classSkillTree" classId="111">
@@ -479,6 +502,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Shillien Saint -->
 	<skillTree type="classSkillTree" classId="112">
@@ -494,6 +518,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Titan -->
 	<skillTree type="classSkillTree" classId="113">
@@ -510,6 +535,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Grand Khavatari -->
 	<skillTree type="classSkillTree" classId="114">
@@ -527,6 +553,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Dominator -->
 	<skillTree type="classSkillTree" classId="115">
@@ -543,6 +570,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Doomcryer -->
 	<skillTree type="classSkillTree" classId="116">
@@ -558,6 +586,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Fortune Seeker -->
 	<skillTree type="classSkillTree" classId="117">
@@ -575,6 +604,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Maestro -->
 	<skillTree type="classSkillTree" classId="118">
@@ -592,6 +622,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Male Soldier -->
 	<skillTree type="classSkillTree" classId="123">
@@ -620,6 +651,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Male Soul Hound -->
 	<skillTree type="classSkillTree" classId="132">
@@ -637,6 +669,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Female Soul Hound -->
 	<skillTree type="classSkillTree" classId="133">
@@ -654,6 +687,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Trickster -->
 	<skillTree type="classSkillTree" classId="134">
@@ -669,6 +703,7 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 	<!-- Inspector -->
 	<skillTree type="classSkillTree" classId="135">
@@ -686,5 +721,6 @@
 		<skill skillName="Heroic Party" skillId="10005" skillLvl="1" getLevel="95" learnedByFS="true" />
 		<skill skillName="Heroic Appetite" skillId="10006" skillLvl="1" getLevel="99" learnedByFS="true" />
 		<skill skillName="Heroic Impulse" skillId="10007" skillLvl="1" getLevel="99" learnedByFS="true" />
+		<skill skillName="Heroic Gate" skillId="10008" skillLvl="1" getLevel="99" learnedByFS="true" />
 	</skillTree>
 </list>

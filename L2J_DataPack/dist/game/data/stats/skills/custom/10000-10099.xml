@@ -170,4 +170,32 @@
 			</effect>
 		</for>
 	</skill>
+	<skill id="10008" levels="1" name="히로익 게이트">
+		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="467" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill1429" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="8615" /> <!-- Summoning Crystal -->
+		<set name="magicLvl" val="78" />
+		<set name="mpConsume" val="57" />
+		<set name="mpInitialConsume" val="227" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="300000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="staticReuse" val="true" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player callPc="true" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
+		<for>
+			<effect name="CallParty" />
+		</for>
+	</skill>
 </list>

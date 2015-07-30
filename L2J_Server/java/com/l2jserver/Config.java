@@ -254,6 +254,18 @@ public final class Config
 	// --------------------------------------------------
 	public static String ZERSIA_CONFIG;
 	public static String ZERSIA_LICENCE;
+	// --------------------------------------------------
+	public static int SOLOINSTANCE_ITEMID1;
+	public static int SOLOINSTANCE_ITEMCNT1;
+	public static int SOLOINSTANCE_ITEMID2;
+	public static int SOLOINSTANCE_ITEMCNT2;
+	public static int SOLOINSTANCE_ITEMID3;
+	public static int SOLOINSTANCE_ITEMCNT3;
+	public static int SOLOINSTANCE_ITEMID4;
+	public static int SOLOINSTANCE_ITEMCNT4;
+	public static int SOLOINSTANCE_EXITING_LOC_X;
+	public static int SOLOINSTANCE_EXITING_LOC_Y;
+	public static int SOLOINSTANCE_EXITING_LOC_Z;
 	
 	// --------------------------------------------------
 	// Zersia Custom Message Settings
@@ -2690,6 +2702,18 @@ public final class Config
 			// ----------------------------------------------------------------
 			ZERSIA_CONFIG = CustomSettings.getString("ZersiaHostname", "");
 			ZERSIA_LICENCE = CustomSettings.getString("ZersiaLicence", "");
+			// ----------------------------------------------------------------
+			SOLOINSTANCE_ITEMID1 = CustomSettings.getInt("SoloInstanceItemId1", 57);
+			SOLOINSTANCE_ITEMID2 = CustomSettings.getInt("SoloInstanceItemId2", 57);
+			SOLOINSTANCE_ITEMID3 = CustomSettings.getInt("SoloInstanceItemId3", 57);
+			SOLOINSTANCE_ITEMID4 = CustomSettings.getInt("SoloInstanceItemId4", 57);
+			SOLOINSTANCE_ITEMCNT1 = CustomSettings.getInt("SoloInstanceItemCnt1", 1);
+			SOLOINSTANCE_ITEMCNT2 = CustomSettings.getInt("SoloInstanceItemCnt2", 1);
+			SOLOINSTANCE_ITEMCNT3 = CustomSettings.getInt("SoloInstanceItemCnt3", 1);
+			SOLOINSTANCE_ITEMCNT4 = CustomSettings.getInt("SoloInstanceItemCnt4", 1);
+			SOLOINSTANCE_EXITING_LOC_X = CustomSettings.getInt("SoloInstanceExitingLocX", 82698);
+			SOLOINSTANCE_EXITING_LOC_Y = CustomSettings.getInt("SoloInstanceExitingLocY", 148638);
+			SOLOINSTANCE_EXITING_LOC_Z = CustomSettings.getInt("SoloInstanceExitingLocZ", -3473);
 			
 			// Load Custom Message Properties file (if exists)
 			final PropertiesParser CustomMessageSettings = new PropertiesParser(CUSTOM_MESSAGE_FILE);

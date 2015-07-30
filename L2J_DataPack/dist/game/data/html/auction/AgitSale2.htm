@@ -1,27 +1,27 @@
-<html><body>
-The standard system price for this clan hall is <font color="aaccff">%AGIT_LAST_PRICE%</font> adena and the last trading price was <font color="aaccff">%AGIT_LAST_PRICE%</font> adena.<br>
-The amount received at the end of the auction is the amount remaining after deducting the <font color="LEVEL">transaction tax (10%)</font> from the successful bid price. How much would you like to set the standard auction price at (minimum bid price)?
+﻿<html><body>
+이 아지트의 표준 가격은 <font color="aaccff">%AGIT_LAST_PRICE%</font>아데나이며 마지막 경매 가격은 <font color="aaccff">%AGIT_LAST_PRICE%</font> 아데나 입니다.<br>
+경매의 마지막날 낙찰된 가격에서 <font color="LEVEL">세금 (10%)</font> 를 차감한 금액이 낙찰금액입니다. 최저입찰 가격을 설정하시기 바랍니다.
 <table width=270 border=0>
 <tr>
 <td width=220 align=right><edit var=minbid width=230 align=right type=number></td>
-<td width=40 align=right>adena</td>
+<td width=40 align=right>아데나</td>
 </tr>
 </table>
-For how many days do you want the auction to run?
+아지트에 대한 경매를 시작 하시겠습니까?
 <table width=270 border=0>
 <tr>
 <td width=270 align=right><combobox width=50 var=day list="7;3;1"></td>
 </tr>
 </table>
-Write an explanation of the clan hall. <multiedit var="comment" width=270>
+아지트에 대한 설명을 작성하세요. <multiedit var="comment" width=270>
 <img src="L2UI.SquareBlank" width=270 height=10>
 <img src="L2UI.SquareWhite" width=270 height=1>
 <img src="L2UI.SquareBlank" width=270 height=5>
 <table width=270 border=0>
 <tr>
 <td width=110></td>
-<td width=80 align=center><button action="%AGIT_LINK_BACK%" value="Back" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=80 align=center><button action="bypass -h npc_%objectId%_auction $day $minbid" value="Sell" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=80 align=center><button action="%AGIT_LINK_BACK%" value="뒤로" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=80 align=center><button action="bypass -h npc_%objectId%_auction $day $minbid" value="판매" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table>
 </body></html>

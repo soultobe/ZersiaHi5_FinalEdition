@@ -1,12 +1,17 @@
-<html><body>
-<font color="LEVEL">Bidding is only permitted in one clan hall.</font> When a bid is submitted, the amount of adena bid is <font color="LEVEL">deposited</font> from the clan warehouse into the auction. <font color="LEVEL">10% of the bid amount is a transaction tax</font> and cannot be returned even if the bidding is canceled.<br>
-<font color="LEVEL">The bid price</font> must be higher than the minimum bid price (or previous bid price when rebidding) and the clan that has written the highest price at the end of the auction wins the auction.<br>
-There are currently <font color="aaccff">%PLEDGE_ADENA%</font> adena in the clan warehouse. The minimum amount that can be bid is <font color="aaccff">%AGIT_AUCTION_MINBID%</font> adena.<br>
-How much do you want to bid?
+﻿<html><body>
+<font color="LEVEL">입찰은 하나의 아지트만 가능</font>합니다. 
+입찰 전 반드시 입찰 금액을<font color="LEVEL"> 혈맹창고</font>에 넣어두어야 하며, 
+아지트 입찰금 만큼 혈맹창고에서 아데나가 회수 됩니다. 
+입찰금은 최소 입찰가보다 낮게 등록할 수 없으며, 
+입찰을<font color="LEVEL"> 취소</font> 시에는 입찰가의<font color="LEVEL"> 10%</font>를 제외한 나머지 금액이 혈맹 창고로 반환됩니다.<br>
+경매는 정해진 일시까지 입찰된 금액 중 최고가를 적어낸 혈맹주가 아지트를 낙찰 받습니다.<br>
+현재, 혈맹 창고에<font color="aaccff">%PLEDGE_ADENA%</font> 아데나가 있으며, 
+최소 입찰가는<font color="aaccff">%AGIT_AUCTION_MINBID%</font> 아데나 입니다.<br>
+입찰 금액을 얼마로 하시겠습니까?
 <table width=270 border=0>
 <tr>
 <td width=220 align=right><edit var=bidprice width=230 align=right type=number></td>
-<td width=40 align=right>adena</td>
+<td width=40 align=right>아데나</td>
 </tr>
 </table>
 <img src="L2UI.SquareBlank" width=270 height=10>
@@ -15,7 +20,7 @@ How much do you want to bid?
 <table width=270 border=0>
 <tr>
 <td width=110></td>
-<td width=80 align=center><button action="%AGIT_LINK_BACK%" value="Back" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=80 align=center><button action="%AGIT_LINK_BACK%" value="뒤로" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td width=80 align=center><button action="bypass -h npc_%objectId%_bid $bidprice" value="Confirm" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table>

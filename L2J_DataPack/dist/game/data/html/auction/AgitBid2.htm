@@ -1,28 +1,27 @@
-<html><body>
+﻿<html><body>
 <table width=270 border=0>
 <tr>
-<td width=90>Minimum bid price</td>
-<td width=180><font color="aaccff">%AGIT_AUCTION_MINBID%</font> adena</td>
+<td width=90>최소입찰가</td>
+<td width=180><font color="aaccff">%AGIT_AUCTION_MINBID%</font> 아데나</td>
 </tr>
 <tr>
-<td>Bid price</td>
-<td><font color="aaccff">%AGIT_AUCTION_BID%</font> adena</td>
+<td>입찰가격</td>
+<td><font color="aaccff">%AGIT_AUCTION_BID%</font> 아데나</td>
 </tr>
 <tr>
-<td>Auction closing date</td>
+<td>경매종료날짜</td>
 <td>%AGIT_AUCTION_END%</td>
 </tr>
 </table><br>
-Rebidding is only possible after a bid has been made or when raising a bid price. When canceling a bid, the transaction tax (<font color="LEVEL">10% of the bid price</font>) cannot be returned.<br>
-Rebidding and bid cancellation can be done through "My Sale Items" in the top menu.<br>
-Do you want to bid?<br>
+입찰금은 최소 입찰가보다 낮게 등록할 수 없으며,<font color="LEVEL"> 입찰을 취소 시에는 입찰가의 10%를 제외한 나머지 금액이 혈맹 창고로 반환 됩니다</font>.
+경매에 낙찰 받지 못하면 입찰했던 금액은 혈맹창고로 다시 반환됩니다. 입찰 하시겠습니까?<br>
 <img src="L2UI.SquareBlank" width=270 height=10>
 <img src="L2UI.SquareWhite" width=270 height=1>
 <img src="L2UI.SquareBlank" width=270 height=5>
 <table width=270 border=0>
 <tr>
 <td width=110></td>
-<td width=80 align=center><button action="%AGIT_LINK_BACK%" value="Back" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=80 align=center><button action="%AGIT_LINK_BACK%" value="뒤로" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td width=80 align=center><button action="bypass -h npc_%objectId%_bid1" value="Confirm" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table>

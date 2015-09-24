@@ -97,6 +97,7 @@ import com.l2jserver.gameserver.instancemanager.AirShipManager;
 import com.l2jserver.gameserver.instancemanager.AntiFeedManager;
 import com.l2jserver.gameserver.instancemanager.AuctionManager;
 import com.l2jserver.gameserver.instancemanager.BoatManager;
+import com.l2jserver.gameserver.instancemanager.BonusExpManager;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.CastleManorManager;
@@ -194,6 +195,9 @@ public final class GameServer
 		EventDispatcher.getInstance();
 		
 		new File("log/game").mkdirs();
+		
+		printSection("Runes XP/SP Manager");
+		BonusExpManager.getInstance();
 		
 		// load script engines
 		printSection("Engines");

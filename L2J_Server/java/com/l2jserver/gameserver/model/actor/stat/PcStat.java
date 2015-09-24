@@ -23,6 +23,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
 import com.l2jserver.gameserver.data.xml.impl.PetDataTable;
+import com.l2jserver.gameserver.instancemanager.BonusExpManager;
 import com.l2jserver.gameserver.model.L2PetLevelData;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.instance.L2ClassMasterInstance;
@@ -129,6 +130,16 @@ public class PcStat extends PlayableStat
 		
 		double bonusExp = 1.;
 		double bonusSp = 1.;
+		
+		long[] bonus = BonusExpManager.getInstance().getBonusExpAndSp(getActiveChar(), addToExp, addToSp);
+		if (bonus[0] > 0L)
+		{
+			addToExp += bonus[0];
+		}
+		if (bonus[1] > 0L)
+		{
+			addToSp = (int) (addToSp + bonus[1]);
+		}
 		
 		if (useBonuses)
 		{

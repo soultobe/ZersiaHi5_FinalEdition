@@ -1,3 +1,5 @@
 eclipse.preferences.version=1
 encoding//dist/game/config/Custom.properties=UTF-8
+encoding//dist/game/config/CustomMessage.properties=UTF-8
+encoding//dist/game/config/General.properties=UTF-8
 encoding/<project>=UTF-8
